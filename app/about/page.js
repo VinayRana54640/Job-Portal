@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Footer from "@/components/Footer";
 
 const bgUrl =
   "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2000&auto=format&fit=crop";
@@ -92,9 +93,9 @@ function Mission() {
             </p>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { metric: "2M+", label: "Active jobs" },
+                { metric: "8000+", label: "Active jobs" },
                 { metric: "60+", label: "Countries" },
-                { metric: "27/min", label: "Hires facilitated" },
+                { metric: "5/min", label: "Hires facilitated" },
               ].map((x) => (
                 <div
                   key={x.label}
@@ -285,42 +286,40 @@ function Values() {
   );
 }
 
-function Leadership() {
-  const leaders = [
-    { name: "Aisha Kapoor", role: "Chief Executive Officer" },
-    { name: "Rahul Iyer", role: "Chief Product Officer" },
-    { name: "Nisha Menon", role: "Head of Employer Success" },
-    { name: "Arjun Desai", role: "Director of Data & AI" },
-  ];
-  return (
-    <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-14">
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900">
-          Leadership
-        </h2>
-        <p className="text-slate-700 mt-3 max-w-3xl">
-          A cross-functional leadership team with backgrounds in product,
-          recruiting, and data science drives the roadmap with a candidate-first
-          mindset.
-        </p>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {leaders.map((p) => (
-            <div
-              key={p.name}
-              className="rounded-xl border border-slate-200 bg-white p-5"
-            >
-              <div className="h-16 w-16 rounded-full bg-slate-100 border border-slate-200" />
-              <div className="mt-3 text-lg font-semibold text-slate-900">
-                {p.name}
-              </div>
-              <div className="text-slate-600">{p.role}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+// function Leadership() {
+//   const leaders = [
+//     { name: "Vinay Rana", role: "Chief Executive Officer" },
+//     { name: "Divyansh Sharma", role: "Chief Product Officer" },
+//   ];
+//   return (
+//     <section className="bg-white">
+//       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-14">
+//         <h2 className="text-2xl md:text-3xl font-semibold text-slate-900">
+//           Leadership
+//         </h2>
+//         <p className="text-slate-700 mt-3 max-w-3xl">
+//           A cross-functional leadership team with backgrounds in product,
+//           recruiting, and data science drives the roadmap with a candidate-first
+//           mindset.
+//         </p>
+//         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+//           {leaders.map((p) => (
+//             <div
+//               key={p.name}
+//               className="rounded-xl border border-slate-200 bg-white p-5"
+//             >
+//               <div className="h-16 w-16 rounded-full bg-slate-100 border border-slate-200" />
+//               <div className="mt-3 text-lg font-semibold text-slate-900">
+//                 {p.name}
+//               </div>
+//               <div className="text-slate-600">{p.role}</div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 function SocialProof() {
   return (
@@ -387,102 +386,102 @@ function CTA() {
           >
             Create account
           </a>
-          <a
+          {/* <a
             href="/employers"
             className="rounded-lg border border-slate-300 text-slate-700 px-5 py-3 hover:bg-white"
           >
             Post a job
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-slate-200 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div>
-          <a href="/" className="flex items-center gap-2 min-w-0">
-            <img
-              src="https://logo.clearbit.com/recruit-holdings.com"
-              alt="Job4Grads"
-              className="h-8 w-8 rounded shrink-0"
-            />
-            <span className="font-semibold text-slate-900 truncate">
-              Job4Grads
-            </span>
-          </a>
-          <p className="text-slate-600 mt-3">
-            Connecting talent with opportunity through intelligent matching.
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold text-slate-900">Candidates</h4>
-          <ul className="mt-3 space-y-2 text-slate-600">
-            <li>
-              <a href="/joblist">Browse Jobs</a>
-            </li>
-            <li>
-              <a href="/companies">Companies</a>
-            </li>
-            <li>
-              <a href="/salary">Salary Guide</a>
-            </li>
-            <li>
-              <a href="/advice">Career Advice</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-semibold text-slate-900">Employers</h4>
-          <ul className="mt-3 space-y-2 text-slate-600">
-            <li>
-              <a href="/employers">Post a Job</a>
-            </li>
-            <li>
-              <a href="/search">Resume Search</a>
-            </li>
-            <li>
-              <a href="/pricing">Pricing</a>
-            </li>
-            <li>
-              <a href="/enterprise">Enterprise</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-semibold text-slate-900">Company</h4>
-          <ul className="mt-3 space-y-2 text-slate-600">
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/news">News</a>
-            </li>
-            <li>
-              <a href="/investors">Investors</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-          <p>© {new Date().getFullYear()} Job4Grads. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-            <a href="/refund">Refunds</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+// function Footer() {
+//   return (
+//     <footer className="border-t border-slate-200 bg-white">
+//       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+//         <div>
+//           <a href="/" className="flex items-center gap-2 min-w-0">
+//             <img
+//               src="https://logo.clearbit.com/recruit-holdings.com"
+//               alt="Job4Grads"
+//               className="h-8 w-8 rounded shrink-0"
+//             />
+//             <span className="font-semibold text-slate-900 truncate">
+//               Job4Grads
+//             </span>
+//           </a>
+//           <p className="text-slate-600 mt-3">
+//             Connecting talent with opportunity through intelligent matching.
+//           </p>
+//         </div>
+//         <div>
+//           <h4 className="font-semibold text-slate-900">Candidates</h4>
+//           <ul className="mt-3 space-y-2 text-slate-600">
+//             <li>
+//               <a href="/joblist">Browse Jobs</a>
+//             </li>
+//             <li>
+//               <a href="/companies">Companies</a>
+//             </li>
+//             <li>
+//               <a href="/salary">Salary Guide</a>
+//             </li>
+//             <li>
+//               <a href="/advice">Career Advice</a>
+//             </li>
+//           </ul>
+//         </div>
+//         <div>
+//           <h4 className="font-semibold text-slate-900">Employers</h4>
+//           <ul className="mt-3 space-y-2 text-slate-600">
+//             <li>
+//               <a href="/employers">Post a Job</a>
+//             </li>
+//             <li>
+//               <a href="/search">Resume Search</a>
+//             </li>
+//             <li>
+//               <a href="/pricing">Pricing</a>
+//             </li>
+//             <li>
+//               <a href="/enterprise">Enterprise</a>
+//             </li>
+//           </ul>
+//         </div>
+//         <div>
+//           <h4 className="font-semibold text-slate-900">Company</h4>
+//           <ul className="mt-3 space-y-2 text-slate-600">
+//             <li>
+//               <a href="/about">About</a>
+//             </li>
+//             <li>
+//               <a href="/news">News</a>
+//             </li>
+//             <li>
+//               <a href="/investors">Investors</a>
+//             </li>
+//             <li>
+//               <a href="/contact">Contact</a>
+//             </li>
+//           </ul>
+//         </div>
+//       </div>
+//       <div className="border-t border-slate-200">
+//         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+//           <p>© {new Date().getFullYear()} Job4Grads. All rights reserved.</p>
+//           <div className="flex items-center gap-4">
+//             <a href="/privacy">Privacy</a>
+//             <a href="/terms">Terms</a>
+//             <a href="/refund">Refunds</a>
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// }
 
 export default function AboutPage() {
   const router = useRouter();
@@ -496,7 +495,7 @@ export default function AboutPage() {
       <Story />
       <HowItWorks />
       <Values />
-      <Leadership />
+      {/* <Leadership /> */}
       <SocialProof />
       <CTA />
       <Footer />
