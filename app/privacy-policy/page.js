@@ -1,5 +1,6 @@
 "use client";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -206,7 +207,8 @@ export default function PrivacyPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <NavBar navigateHome={navigateHome} />
+      <Header />
+      {/* <NavBar navigateHome={navigateHome} /> */}
       <PrivacyContent />
       <Footer />
     </div>
