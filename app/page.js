@@ -456,7 +456,11 @@ function JobCard({ job, navigateJobdescription }) {
       }`}
     >
       <img
-        src="http://148.66.159.109/abb.gif"
+        src={
+          "https://gufvnuemtylcczajttgm.supabase.co/storage/v1/object/public/Job%20Portal/" +
+          job.company.split(" ")[0].toLowerCase() +
+          ".gif"
+        }
         alt={job.company}
         className="h-12 w-12 rounded bg-white border border-slate-200 shrink-0"
       />

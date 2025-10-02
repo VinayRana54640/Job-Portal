@@ -147,7 +147,11 @@ function JobCard({ job }) {
       {/* Mobile: Vertical layout, Desktop: Horizontal */}
       <div className="flex gap-3 sm:gap-4 items-start">
         <img
-          src={job.logo}
+          src={
+            "https://gufvnuemtylcczajttgm.supabase.co/storage/v1/object/public/Job%20Portal/" +
+            job.company.split(" ")[0].toLowerCase() +
+            ".gif"
+          }
           alt={job.company}
           className="h-10 w-10 sm:h-12 sm:w-12 rounded bg-white border border-slate-200 object-contain shrink-0"
         />
