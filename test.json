@@ -1,0 +1,2690 @@
+[
+  {
+    "positionName": "Full Stack Developer - MERN Fresher",
+    "aboutRole": "Join an agile product squad to build user-facing features with guidance from senior MERN engineers.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement basic React components and hooks",
+      "Assist in building REST APIs with Node.js and Express",
+      "Write simple MongoDB queries and aggregations",
+      "Participate in code reviews and sprint ceremonies"
+    ],
+    "qualifications": [
+      "Fundamentals of HTML, CSS, and JavaScript",
+      "Understanding of React basics or Node.js",
+      "Knowledge of Git and package managers",
+      "Good problem-solving and debugging attitude"
+    ],
+    "benefits": [
+      "Mentorship program",
+      "Remote-friendly policy",
+      "Learning budget for courses",
+      "Health insurance"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Git",
+      "HTML",
+      "CSS"
+    ],
+    "salaryRange": {
+      "min": "5.4 LPA",
+      "max": "7.5 LPA",
+      "minLpa": 5.4,
+      "maxLpa": 7.5
+    },
+    "company": "ABB",
+    "website": "https://www.abb.com/global/en/areas/motion/drives?creative=761794327905&keyword=dc%20drive&matchtype=b&network=g&device=c&gad_source=1&gad_campaignid=22753590232&gbraid=0AAAAAo7uzgySsOjEpq1UWfJwzdw8VbAZN&gclid=Cj0KCQjw3OjGBhDYARIsADd-uX7a0Yrhv-pgRNGS5gPozkoaT-zii0Xz3iNK2BSpo4b00wggp_xPEUUaAi5EEALw_wcB",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Full Stack Engineer - Java & Spring Boot",
+    "aboutRole": "Kickstart a backend-first full stack path using Java, Spring Boot, and modern web basics.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Contribute to REST endpoints in Spring Boot",
+      "Support UI tasks in JavaScript, HTML, CSS",
+      "Write basic SQL for MySQL",
+      "Document APIs using OpenAPI/Swagger"
+    ],
+    "qualifications": [
+      "Good Java OOP understanding",
+      "Basic SQL skills",
+      "Eager to learn cloud deployment",
+      "Familiarity with Git branching"
+    ],
+    "benefits": [
+      "Certification sponsorship",
+      "Hybrid work",
+      "Wellness stipend",
+      "Team hackathons"
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Swagger"
+    ],
+    "salaryRange": {
+      "min": "4.2 LPA",
+      "max": "5.4 LPA",
+      "minLpa": 4.2,
+      "maxLpa": 5.4
+    },
+    "company": "Accenture",
+    "website": "https://www.accenture.com/us-en",
+    "location": "All India"
+  },
+  {
+    "positionName": "Full Stack Trainee Developer - Next.js",
+    "aboutRole": "Work with a senior mentor to build SSR/SSG features using Next.js and a Node backend.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build pages with Next.js routing and data fetching",
+      "Assist in API integration and state management",
+      "Write PostgreSQL queries with guidance",
+      "Help with unit tests and bug fixes"
+    ],
+    "qualifications": [
+      "Basic React or Next.js exposure",
+      "Comfortable with TypeScript basics (nice to have)",
+      "Understanding of REST APIs",
+      "Strong willingness to learn"
+    ],
+    "benefits": [
+      "Paid learning hours",
+      "Equipment allowance",
+      "Peer-learning sessions",
+      "Medical coverage"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "TypeScript",
+      "REST"
+    ],
+    "salaryRange": {
+      "min": "4.6 LPA",
+      "max": "4.7 LPA",
+      "minLpa": 4.6,
+      "maxLpa": 4.7
+    },
+    "company": "Acesoft",
+    "website": "https://acesoftlabs.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Python Full Stack Intern - Django + React",
+    "aboutRole": "Contribute to a data-driven platform using Django REST Framework and React UI components.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Assist in building Django REST endpoints",
+      "Create simple React forms and tables",
+      "Write MySQL models and migrations",
+      "Support QA with basic test cases"
+    ],
+    "qualifications": [
+      "Python fundamentals",
+      "Basic Django or Flask exposure",
+      "Familiarity with React or JS",
+      "Understanding of HTTP/JSON"
+    ],
+    "benefits": [
+      "Senior mentorship",
+      "Course reimbursements",
+      "Flexible hours",
+      "Performance bonus"
+    ],
+    "technologies": [
+      "Python",
+      "Django",
+      "DRF",
+      "React",
+      "MySQL",
+      "JSON",
+      "HTTP"
+    ],
+    "salaryRange": {
+      "min": "3.7 LPA",
+      "max": "5.3 LPA",
+      "minLpa": 3.7,
+      "maxLpa": 5.3
+    },
+    "company": "Achnet",
+    "website": "https://www.achnet.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Developer - MEAN Fresher",
+    "aboutRole": "Join the MEAN team to deliver internal tools and dashboards with Angular and Node.js.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop Angular components and services",
+      "Assist Node.js/Express API creation",
+      "Work on MongoDB schemas and indexes",
+      "Write unit tests for core modules"
+    ],
+    "qualifications": [
+      "Angular basics (components, routes)",
+      "JavaScript/TypeScript fundamentals",
+      "MongoDB CRUD understanding",
+      "Git workflow familiarity"
+    ],
+    "benefits": [
+      "Transport allowance",
+      "Upskilling bootcamps",
+      "Annual health checkup",
+      "Paid time off"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "TypeScript",
+      "Jest"
+    ],
+    "salaryRange": {
+      "min": "3.6 LPA",
+      "max": "6.8 LPA",
+      "minLpa": 3.6,
+      "maxLpa": 6.8
+    },
+    "company": "Acme Services Private Limited",
+    "website": "https://www.acme-services.in/",
+    "location": "Gurugram, Noida"
+  },
+  {
+    "positionName": "Cloud-ready Full Stack Fresher - Node & AWS",
+    "aboutRole": "Support a cloud-native product team using Node.js microservices deployed on AWS.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write simple Express routes and middleware",
+      "Support AWS S3/Lambda integrations",
+      "Assist with PostgreSQL data access",
+      "Help monitor logs and metrics"
+    ],
+    "qualifications": [
+      "Node.js basics",
+      "Understanding of REST principles",
+      "SQL familiarity",
+      "Curiosity about cloud services"
+    ],
+    "benefits": [
+      "AWS learning credits",
+      "Flexible WFH",
+      "Wellness benefits",
+      "Mac/Windows laptop option"
+    ],
+    "technologies": [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "AWS S3",
+      "AWS Lambda",
+      "CloudWatch"
+    ],
+    "salaryRange": {
+      "min": "4.5 LPA",
+      "max": "6.6 LPA",
+      "minLpa": 4.5,
+      "maxLpa": 6.6
+    },
+    "company": "AcmeMind Solutions",
+    "website": "https://acmeminds.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Web Engineer - Next.js & Python",
+    "aboutRole": "Build SEO-friendly web apps with Next.js while learning Python microservices patterns.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement SSR pages and API routes in Next.js",
+      "Assist with Python FastAPI services",
+      "Write minimal SQL for Postgres",
+      "Contribute to simple automation scripts"
+    ],
+    "qualifications": [
+      "JS/TS fundamentals",
+      "Basic Python scripting",
+      "Understanding of APIs and status codes",
+      "Desire to learn CI/CD"
+    ],
+    "benefits": [
+      "Learning sprints",
+      "Meal card",
+      "Fitness reimbursement",
+      "Mentor one-on-ones"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "TypeScript"
+    ],
+    "salaryRange": {
+      "min": "3.4 LPA",
+      "max": "3.4 LPA",
+      "minLpa": 3.4,
+      "maxLpa": 3.4
+    },
+    "company": "ACZ Global",
+    "website": "https://www.aczglobal.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "JavaScript & AWS Full Stack Trainee",
+    "aboutRole": "Start a JS-first journey across frontend React and backend Node with AWS integration.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop simple React components",
+      "Add Node.js routes and handlers",
+      "Help set up S3 uploads and IAM roles",
+      "Write basic tests"
+    ],
+    "qualifications": [
+      "Strong JS fundamentals",
+      "Basic React or Node exposure",
+      "Awareness of cloud basics",
+      "Good communication"
+    ],
+    "benefits": [
+      "Stocked learning library",
+      "Quarterly team events",
+      "Health insurance",
+      "Internet reimbursement"
+    ],
+    "technologies": ["JavaScript", "React", "Node.js", "AWS S3", "IAM", "Jest"],
+    "salaryRange": {
+      "min": "3.3 LPA",
+      "max": "6.9 LPA",
+      "minLpa": 3.3,
+      "maxLpa": 6.9
+    },
+    "company": "Adobe",
+    "website": "https://www.adobe.com/",
+    "location": "Gurugram, Bangalore"
+  },
+  {
+    "positionName": "Full Stack Developer - Data-centric (Freshers)",
+    "aboutRole": "Help build analytics dashboards with Next.js and Python services backed by PostgreSQL.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create UI charts/pages in Next.js",
+      "Assist Python API endpoints",
+      "Optimize basic SQL queries",
+      "Participate in standups and demos"
+    ],
+    "qualifications": [
+      "Knowledge of JS frameworks",
+      "Basic Python knowledge",
+      "SQL basics and indexing concepts",
+      "Eager to learn data modeling"
+    ],
+    "benefits": [
+      "Conference passes",
+      "Flexible schedule",
+      "Health benefits",
+      "Learning stipend"
+    ],
+    "technologies": ["Next.js", "Python", "PostgreSQL", "Node.js", "REST"],
+    "salaryRange": {
+      "min": "7.2 LPA",
+      "max": "7.4 LPA",
+      "minLpa": 7.2,
+      "maxLpa": 7.4
+    },
+    "company": "Adpushup",
+    "website": "https://www.adpushup.com/",
+    "location": "New Delhi"
+  },
+  {
+    "positionName": "Associate Full Stack Engineer - Java + React",
+    "aboutRole": "Contribute to a modern web platform using Java Spring Boot and React UI components.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build small React features",
+      "Implement CRUD APIs in Spring Boot",
+      "Write MySQL queries and migrations",
+      "Help with CI config updates"
+    ],
+    "qualifications": [
+      "Java OOP and collections",
+      "React basics",
+      "SQL and normalization",
+      "Git and pull request etiquette"
+    ],
+    "benefits": [
+      "Mentor pairing",
+      "Annual bonus",
+      "Device allowance",
+      "Paid certifications"
+    ],
+    "technologies": ["Java", "Spring Boot", "React", "MySQL", "Git", "CI"],
+    "salaryRange": {
+      "min": "3.6 LPA",
+      "max": "4.7 LPA",
+      "minLpa": 3.6,
+      "maxLpa": 4.7
+    },
+    "company": "Affle",
+    "website": "https://affle.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Full Stack Developer - Express & Mongo",
+    "aboutRole": "Join the platform team to deliver APIs and web UIs with Express and a MongoDB backend.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop Express routes and controllers",
+      "Build simple React tables and forms",
+      "Model data with Mongoose",
+      "Support API documentation"
+    ],
+    "qualifications": [
+      "Node.js basics",
+      "React or Vue exposure",
+      "Understanding of NoSQL",
+      "Clear communication"
+    ],
+    "benefits": [
+      "Learning pods",
+      "Medical insurance",
+      "Paid leaves",
+      "Monthly tech talks"
+    ],
+    "technologies": ["Node.js", "Express", "MongoDB", "Mongoose", "React"],
+    "salaryRange": {
+      "min": "4.4 LPA",
+      "max": "4.6 LPA",
+      "minLpa": 4.4,
+      "maxLpa": 4.6
+    },
+    "company": "Aionos",
+    "website": "https://aionos.io/",
+    "location": "Gurugram, Bangalore"
+  },
+  {
+    "positionName": "Full Stack Intern - Python Flask + Next.js",
+    "aboutRole": "Work closely with product engineers to prototype features in Flask and Next.js.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write Flask routes and serializers",
+      "Implement Next.js pages and API routes",
+      "Set up basic PostgreSQL schemas",
+      "Assist with unit/integration tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "React or Next.js exposure",
+      "SQL knowledge",
+      "Version control experience"
+    ],
+    "benefits": [
+      "Buddy program",
+      "Upskill budget",
+      "WFH flexibility",
+      "Team outings"
+    ],
+    "technologies": ["Flask", "Python", "Next.js", "PostgreSQL", "pytest"],
+    "salaryRange": {
+      "min": "5.9 LPA",
+      "max": "6.3 LPA",
+      "minLpa": 5.9,
+      "maxLpa": 6.3
+    },
+    "company": "Aitouch",
+    "website": "https://aitouch.in/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Associate Engineer - MEAN Stack",
+    "aboutRole": "Help deliver enterprise dashboards with Angular frontends and Node.js backends.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build Angular components with RxJS",
+      "Add Express middleware for APIs",
+      "Define MongoDB indexes",
+      "Write unit tests with Jasmine/Karma"
+    ],
+    "qualifications": [
+      "Angular basics and TypeScript",
+      "Node/Express fundamentals",
+      "NoSQL familiarity",
+      "Testing awareness"
+    ],
+    "benefits": [
+      "Learning Fridays",
+      "Insurance coverage",
+      "Work-from-anywhere weeks",
+      "Annual L&D stipend"
+    ],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Jasmine",
+      "Karma"
+    ],
+    "salaryRange": {
+      "min": "4.6 LPA",
+      "max": "6.4 LPA",
+      "minLpa": 4.6,
+      "maxLpa": 6.4
+    },
+    "company": "Akamai",
+    "website": "https://www.akamai.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Full Stack Trainee - Java + Next.js",
+    "aboutRole": "Explore a hybrid environment building Spring Boot APIs consumed by Next.js frontends.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement REST endpoints with Spring Boot",
+      "Integrate APIs into Next.js pages",
+      "Write unit tests for controllers",
+      "Assist with Docker-based local setup"
+    ],
+    "qualifications": [
+      "Java fundamentals",
+      "Basic React/Next.js knowledge",
+      "Understanding of REST/JSON",
+      "Docker basics preferred"
+    ],
+    "benefits": [
+      "Mentored roadmap",
+      "Learning credits",
+      "Medical benefits",
+      "Hybrid schedule"
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "React",
+      "Docker",
+      "MySQL"
+    ],
+    "salaryRange": {
+      "min": "3.8 LPA",
+      "max": "6.5 LPA",
+      "minLpa": 3.8,
+      "maxLpa": 6.5
+    },
+    "company": "Alba smart automation",
+    "website": "https://www.albasmart.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Full Stack Engineer - Python & PostgreSQL",
+    "aboutRole": "Help build backend services in Python while contributing to a minimal JS frontend.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create FastAPI/Django views",
+      "Write SQL queries on PostgreSQL",
+      "Implement basic UI elements in React",
+      "Participate in debugging sessions"
+    ],
+    "qualifications": [
+      "Python basics and HTTP concepts",
+      "SQL joins and indexes",
+      "JS fundamentals",
+      "Git and branching"
+    ],
+    "benefits": [
+      "Tech mentor",
+      "Flexible PTO",
+      "Learning wallet",
+      "Health plan"
+    ],
+    "technologies": ["Python", "FastAPI", "Django", "PostgreSQL", "React"],
+    "salaryRange": {
+      "min": "4.2 LPA",
+      "max": "5.5 LPA",
+      "minLpa": 4.2,
+      "maxLpa": 5.5
+    },
+    "company": "Algoshack Technologies",
+    "website": "https://algoshack.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Developer - MERN (Campus Hire)",
+    "aboutRole": "Contribute to greenfield features in a MERN SaaS product under senior guidance.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build React UI with reusable components",
+      "Add Node.js API endpoints",
+      "Design MongoDB schemas",
+      "Write unit tests and docs"
+    ],
+    "qualifications": [
+      "Strong JS, HTML, CSS basics",
+      "React or Node exposure",
+      "REST and JSON understanding",
+      "Eagerness to learn cloud"
+    ],
+    "benefits": [
+      "Remote stipend",
+      "Upskill subscriptions",
+      "Paid certifications",
+      "Wellness benefits"
+    ],
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "Jest", "CSS"],
+    "salaryRange": {
+      "min": "4 LPA",
+      "max": "5.7 LPA",
+      "minLpa": 4,
+      "maxLpa": 5.7
+    },
+    "company": "Alight",
+    "website": "https://www.alight.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Associate Web Developer - Java + Vue (Full Stack)",
+    "aboutRole": "Join a cross-functional team to ship features across a Java backend and modern JS frontend.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write Spring Boot controllers",
+      "Support Vue/React UI tasks",
+      "Create MySQL views and procedures",
+      "Assist CI/CD pipeline updates"
+    ],
+    "qualifications": [
+      "Java OOP and REST basics",
+      "JS framework familiarity",
+      "SQL fundamentals",
+      "Understanding of git flow"
+    ],
+    "benefits": [
+      "Learning mentorship",
+      "Health insurance",
+      "Annual bonus",
+      "Hybrid work"
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "Vue.js",
+      "React",
+      "CI/CD"
+    ],
+    "salaryRange": {
+      "min": "4.7 LPA",
+      "max": "7.8 LPA",
+      "minLpa": 4.7,
+      "maxLpa": 7.8
+    },
+    "company": "Almonds Ai",
+    "website": "https://almonds.ai/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Full Stack Intern - Next.js + MongoDB",
+    "aboutRole": "Help implement BFF patterns with Next.js API routes and a MongoDB data layer.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Next.js pages and API handlers",
+      "Write Mongoose models and validators",
+      "Integrate UI with backend services",
+      "Fix bugs and improve UX"
+    ],
+    "qualifications": [
+      "React/Next.js basics",
+      "NoSQL understanding",
+      "Git usage",
+      "Strong curiosity"
+    ],
+    "benefits": [
+      "Pair programming",
+      "Learning allowance",
+      "WFH policy",
+      "Medical benefits"
+    ],
+    "technologies": ["Next.js", "React", "MongoDB", "Mongoose", "Node.js"],
+    "salaryRange": {
+      "min": "6.3 LPA",
+      "max": "7.1 LPA",
+      "minLpa": 6.3,
+      "maxLpa": 7.1
+    },
+    "company": "Altos global services private limited",
+    "website": "https://www.altosinc.com/contact-us",
+    "location": "Noida"
+  },
+  {
+    "positionName": "Graduate Engineer - Python Full Stack",
+    "aboutRole": "Learn to build end-to-end web features using Flask/FastAPI and modern frontend stacks.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop simple API endpoints",
+      "Implement responsive UI with HTML/CSS/JS",
+      "Write basic PostgreSQL queries",
+      "Contribute to test coverage"
+    ],
+    "qualifications": [
+      "Python scripting",
+      "Web basics (HTML/CSS/JS)",
+      "SQL knowledge",
+      "Willingness to learn"
+    ],
+    "benefits": [
+      "Mentor support",
+      "Learning resources",
+      "Flexible timings",
+      "Health coverage"
+    ],
+    "technologies": [
+      "Python",
+      "Flask",
+      "FastAPI",
+      "PostgreSQL",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "salaryRange": {
+      "min": "5.1 LPA",
+      "max": "5.5 LPA",
+      "minLpa": 5.1,
+      "maxLpa": 5.5
+    },
+    "company": "Alyssum global services",
+    "website": "https://alyssum.global/",
+    "location": "Remote"
+  },
+  {
+    "positionName": "Junior Engineer - MEAN + AWS",
+    "aboutRole": "Assist in building Angular frontends and Node services deployed on AWS.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Angular components and routes",
+      "Develop Express endpoints",
+      "Integrate with AWS S3 for assets",
+      "Write unit tests"
+    ],
+    "qualifications": [
+      "Angular/TypeScript basics",
+      "Node.js fundamentals",
+      "Cloud interest",
+      "Version control skills"
+    ],
+    "benefits": [
+      "AWS training",
+      "Hybrid schedule",
+      "Health insurance",
+      "Learning stipend"
+    ],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "AWS S3",
+      "MongoDB"
+    ],
+    "salaryRange": {
+      "min": "4.3 LPA",
+      "max": "6.6 LPA",
+      "minLpa": 4.3,
+      "maxLpa": 6.6
+    },
+    "company": "Amantya Technologies",
+    "website": "https://www.amantyatech.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Full Stack Trainee - React & Spring",
+    "aboutRole": "Contribute to a microservices platform powered by Spring Boot with a React front-end.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write React components and hooks",
+      "Build simple Spring Boot controllers",
+      "Write MySQL queries",
+      "Support logging and monitoring tasks"
+    ],
+    "qualifications": [
+      "React basics",
+      "Java fundamentals",
+      "SQL familiarity",
+      "Understanding of REST"
+    ],
+    "benefits": ["Mentored sprints", "Learning budget", "PTO", "Health plan"],
+    "technologies": ["React", "Java", "Spring Boot", "MySQL", "REST"],
+    "salaryRange": {
+      "min": "4.3 LPA",
+      "max": "6 LPA",
+      "minLpa": 4.3,
+      "maxLpa": 6
+    },
+    "company": "Amdocs",
+    "website": "https://www.amdocs.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Full Stack Fresher - MERN + AWS",
+    "aboutRole": "Work on customer-facing modules using the MERN stack with basic AWS integrations.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement React UI forms",
+      "Add Express routes and validation",
+      "Use MongoDB aggregations with guidance",
+      "Assist S3 uploads and CloudFront setup"
+    ],
+    "qualifications": [
+      "JS, HTML, CSS proficiency",
+      "React or Node exposure",
+      "Understanding of HTTP and JSON",
+      "Willing to learn DevOps basics"
+    ],
+    "benefits": [
+      "Cloud learning credits",
+      "Flexible work hours",
+      "Health benefits",
+      "Team offsites"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "AWS S3",
+      "CloudFront"
+    ],
+    "salaryRange": {
+      "min": "6.6 LPA",
+      "max": "6.7 LPA",
+      "minLpa": 6.6,
+      "maxLpa": 6.7
+    },
+    "company": "Anarock Property Consultants",
+    "website": "https://anarock.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Graduate Full Stack Developer - Java + PostgreSQL",
+    "aboutRole": "Help deliver APIs and admin UIs backed by Java services and Postgres databases.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop CRUD endpoints in Spring Boot",
+      "Build basic UI components",
+      "Write SQL with joins and indexes",
+      "Assist with code reviews"
+    ],
+    "qualifications": [
+      "Java, OOP, and collections",
+      "Web basics (HTML/CSS/JS)",
+      "SQL fundamentals",
+      "Git workflows"
+    ],
+    "benefits": [
+      "Buddy mentorship",
+      "Upskilling budget",
+      "Hybrid work",
+      "Medical insurance"
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "salaryRange": {
+      "min": "4.9 LPA",
+      "max": "5.9 LPA",
+      "minLpa": 4.9,
+      "maxLpa": 5.9
+    },
+    "company": "Andor Tech",
+    "website": "https://www.andortech.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Developer - Next.js Fresh Grad",
+    "aboutRole": "Join the web experience team using Next.js for SSR and incremental static regeneration.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build SEO-friendly pages in Next.js",
+      "Integrate REST/GraphQL APIs",
+      "Write lightweight components and hooks",
+      "Fix UI bugs and improve performance"
+    ],
+    "qualifications": [
+      "React/Next.js familiarity",
+      "JS/TS understanding",
+      "Basics of API consumption",
+      "Testing curiosity"
+    ],
+    "benefits": [
+      "Learning Fridays",
+      "WFH budget",
+      "Therapy support",
+      "Health insurance"
+    ],
+    "technologies": ["Next.js", "React", "TypeScript", "REST", "GraphQL"],
+    "salaryRange": {
+      "min": "3.7 LPA",
+      "max": "5.1 LPA",
+      "minLpa": 3.7,
+      "maxLpa": 5.1
+    },
+    "company": "ANSR Source",
+    "website": "https://ansrsource.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Junior Backend-heavy Full Stack - Python",
+    "aboutRole": "Support backend-first development in Django/Flask with a minimal React frontend.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build REST views in Django/Flask",
+      "Write basic ORM queries",
+      "Implement simple React components",
+      "Contribute to API docs"
+    ],
+    "qualifications": [
+      "Python basics",
+      "ORM familiarity",
+      "JS/React basics",
+      "Git knowledge"
+    ],
+    "benefits": [
+      "Mentor pairing",
+      "Learning credits",
+      "Flexible PTO",
+      "Medical plan"
+    ],
+    "technologies": [
+      "Python",
+      "Django",
+      "Flask",
+      "React",
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "salaryRange": {
+      "min": "5.1 LPA",
+      "max": "6.7 LPA",
+      "minLpa": 5.1,
+      "maxLpa": 6.7
+    },
+    "company": "Antino Labs",
+    "website": "https://www.antino.com/",
+    "location": "Gurugram, Noida"
+  },
+  {
+    "positionName": "Associate Engineer - MEAN + PostgreSQL",
+    "aboutRole": "Help ship Angular-driven apps with Node.js APIs and PostgreSQL persistence.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Angular modules and services",
+      "Write Express controllers",
+      "Write simple SQL queries",
+      "Assist with CI configurations"
+    ],
+    "qualifications": [
+      "Angular/TypeScript basics",
+      "Node.js fundamentals",
+      "SQL knowledge",
+      "Understanding of REST"
+    ],
+    "benefits": [
+      "Upskill tracks",
+      "Health coverage",
+      "Hybrid work",
+      "Annual bonus"
+    ],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL"
+    ],
+    "salaryRange": {
+      "min": "7.8 LPA",
+      "max": "7.8 LPA",
+      "minLpa": 7.8,
+      "maxLpa": 7.8
+    },
+    "company": "Apexon",
+    "website": "https://www.apexon.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Trainee - Java + MongoDB",
+    "aboutRole": "Join a team modernizing services with Java backends and MongoDB storage.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement Spring Boot endpoints",
+      "Integrate MongoDB repositories",
+      "Contribute to minimal UI components",
+      "Write unit tests for services"
+    ],
+    "qualifications": [
+      "Java basics",
+      "MongoDB familiarity",
+      "JS fundamentals",
+      "Version control skills"
+    ],
+    "benefits": [
+      "Learning stipend",
+      "Medical coverage",
+      "Hybrid model",
+      "Team lunches"
+    ],
+    "technologies": ["Java", "Spring Boot", "MongoDB", "React", "JUnit"],
+    "salaryRange": {
+      "min": "3 LPA",
+      "max": "6.8 LPA",
+      "minLpa": 3,
+      "maxLpa": 6.8
+    },
+    "company": "Apoxeo",
+    "website": "https://apoxeo.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Junior Full Stack - Next.js + AWS",
+    "aboutRole": "Work on a cloud-backed Next.js application with serverless integrations.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build Next.js pages and API routes",
+      "Integrate with AWS Lambda endpoints",
+      "Assist with DynamoDB or Postgres",
+      "Write basic unit tests"
+    ],
+    "qualifications": [
+      "React/Next.js basics",
+      "Cloud curiosity",
+      "JS/TS fundamentals",
+      "API usage understanding"
+    ],
+    "benefits": [
+      "AWS learning path",
+      "Remote-first",
+      "Health insurance",
+      "Learning budget"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "AWS Lambda",
+      "PostgreSQL",
+      "TypeScript"
+    ],
+    "salaryRange": {
+      "min": "4 LPA",
+      "max": "7.9 LPA",
+      "minLpa": 4,
+      "maxLpa": 7.9
+    },
+    "company": "Aristocrat Hybrid",
+    "website": "https://www.aristocrat.com/aristocrat-launches-all-flex-global-work-model/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Associate Software Engineer - MERN Commerce",
+    "aboutRole": "Help develop e-commerce features using MERN stack and modern tooling.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement product listing UI",
+      "Add Node.js APIs for carts and orders",
+      "Design MongoDB models",
+      "Write component tests"
+    ],
+    "qualifications": [
+      "Proficient in JS, HTML, CSS",
+      "React basics",
+      "Node/Express basics",
+      "NoSQL understanding"
+    ],
+    "benefits": [
+      "Learning stipend",
+      "ESOP eligibility",
+      "Healthcare",
+      "WFH support"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Testing Library"
+    ],
+    "salaryRange": {
+      "min": "3.9 LPA",
+      "max": "7.8 LPA",
+      "minLpa": 3.9,
+      "maxLpa": 7.8
+    },
+    "company": "Aritha Consulting Services",
+    "website": "https://www.aritha.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Junior Backend + UI - Java & React",
+    "aboutRole": "Contribute to a services layer in Java and a lightweight React admin panel.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop Spring Boot services",
+      "Integrate with React forms and tables",
+      "Write MySQL queries",
+      "Document endpoints"
+    ],
+    "qualifications": [
+      "Java fundamentals",
+      "React basics",
+      "SQL knowledge",
+      "Git workflow"
+    ],
+    "benefits": [
+      "Mentor guidance",
+      "Skill-building budget",
+      "Hybrid work",
+      "Medical coverage"
+    ],
+    "technologies": ["Java", "Spring Boot", "React", "MySQL", "REST"],
+    "salaryRange": {
+      "min": "6 LPA",
+      "max": "7.6 LPA",
+      "minLpa": 6,
+      "maxLpa": 7.6
+    },
+    "company": "Assetbridge",
+    "website": "",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Fresher - Python + React (Analytics)",
+    "aboutRole": "Assist in building analytics modules using Python services with React dashboards.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add FastAPI routes",
+      "Build React charts and filters",
+      "Write Postgres queries",
+      "Support testing and CI"
+    ],
+    "qualifications": [
+      "Python basics",
+      "React/JS familiarity",
+      "SQL and indexes basics",
+      "Desire to learn testing"
+    ],
+    "benefits": [
+      "Learning plan",
+      "Health insurance",
+      "Home office stipend",
+      "Team events"
+    ],
+    "technologies": ["Python", "FastAPI", "React", "PostgreSQL", "pytest"],
+    "salaryRange": {
+      "min": "4.7 LPA",
+      "max": "5.6 LPA",
+      "minLpa": 4.7,
+      "maxLpa": 5.6
+    },
+    "company": "Astrome technologies",
+    "website": "https://astrome.co/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Graduate Full Stack - Angular + Node",
+    "aboutRole": "Build internal tools using Angular frontends backed by Node.js APIs.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Angular components and pipes",
+      "Implement Express routes",
+      "Model MongoDB collections",
+      "Fix UI and API bugs"
+    ],
+    "qualifications": [
+      "Angular basics",
+      "Node/Express fundamentals",
+      "MongoDB understanding",
+      "Git familiarity"
+    ],
+    "benefits": [
+      "Mentor pairing",
+      "Learning stipend",
+      "Medical coverage",
+      "Flexible timings"
+    ],
+    "technologies": ["Angular", "Node.js", "Express", "MongoDB", "RxJS"],
+    "salaryRange": {
+      "min": "5.4 LPA",
+      "max": "6 LPA",
+      "minLpa": 5.4,
+      "maxLpa": 6
+    },
+    "company": "ASV Consulting Services",
+    "website": "https://acstechconsulting.com/",
+    "location": "Remote"
+  },
+  {
+    "positionName": "Full Stack Intern - Java + Next.js (B2B)",
+    "aboutRole": "Help deliver B2B portal features using Spring Boot and Next.js pages.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write Spring REST controllers",
+      "Build Next.js forms and tables",
+      "Create MySQL indexes",
+      "Add simple unit tests"
+    ],
+    "qualifications": [
+      "Java and REST basics",
+      "React/Next.js exposure",
+      "SQL fundamentals",
+      "Testing interest"
+    ],
+    "benefits": [
+      "Course reimbursements",
+      "Hybrid model",
+      "Medical plan",
+      "Team lunches"
+    ],
+    "technologies": ["Java", "Spring Boot", "Next.js", "MySQL", "JUnit"],
+    "salaryRange": {
+      "min": "3.3 LPA",
+      "max": "5.2 LPA",
+      "minLpa": 3.3,
+      "maxLpa": 5.2
+    },
+    "company": "Augmatrix Go",
+    "website": "https://www.augmatrixgo.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Developer - Python + MongoDB",
+    "aboutRole": "Join a data services team leveraging Python APIs with MongoDB storage and a simple JS UI.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement Flask endpoints",
+      "Write MongoEngine/Motor models",
+      "Add JS UI enhancements",
+      "Support integration tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "NoSQL familiarity",
+      "JS/HTML/CSS basics",
+      "Git usage"
+    ],
+    "benefits": [
+      "Mentorship",
+      "Learning credits",
+      "Remote-friendly",
+      "Medical insurance"
+    ],
+    "technologies": ["Python", "Flask", "MongoDB", "React", "Playwright"],
+    "salaryRange": {
+      "min": "3.5 LPA",
+      "max": "6.5 LPA",
+      "minLpa": 3.5,
+      "maxLpa": 6.5
+    },
+    "company": "AVISPL",
+    "website": "https://avispl.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Associate Full Stack - Next.js + Postgres",
+    "aboutRole": "Build SSR pages and API endpoints with a Postgres-backed data layer.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Next.js app router pages",
+      "Write API route handlers",
+      "Design simple Postgres tables",
+      "Add unit tests"
+    ],
+    "qualifications": [
+      "React/Next.js understanding",
+      "JS/TS basics",
+      "SQL familiarity",
+      "Version control"
+    ],
+    "benefits": [
+      "Learning time",
+      "Health benefits",
+      "WFH stipend",
+      "Team offsides"
+    ],
+    "technologies": ["Next.js", "React", "TypeScript", "PostgreSQL", "Node.js"],
+    "salaryRange": {
+      "min": "5.8 LPA",
+      "max": "6.6 LPA",
+      "minLpa": 5.8,
+      "maxLpa": 6.6
+    },
+    "company": "AWIGN Expert",
+    "website": "https://www.awign.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Trainee - Java + AWS",
+    "aboutRole": "Support microservices in Java with basic AWS deployments in a supervised setting.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Spring Boot service endpoints",
+      "Configure simple AWS EC2 tasks",
+      "Write MySQL DDL/DML",
+      "Help with logs and monitoring"
+    ],
+    "qualifications": [
+      "Java basics",
+      "Cloud curiosity",
+      "SQL understanding",
+      "Git skills"
+    ],
+    "benefits": [
+      "AWS credits",
+      "Hybrid work",
+      "Medical insurance",
+      "Learning allowance"
+    ],
+    "technologies": ["Java", "Spring Boot", "AWS EC2", "MySQL", "CloudWatch"],
+    "salaryRange": {
+      "min": "6 LPA",
+      "max": "7.2 LPA",
+      "minLpa": 6,
+      "maxLpa": 7.2
+    },
+    "company": "AWL India",
+    "website": "https://www.awlindia.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Junior Web Developer - MERN + Tailwind",
+    "aboutRole": "Build responsive UIs with React and Tailwind, integrating Node APIs and MongoDB.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create React components with Tailwind",
+      "Add Express endpoints",
+      "Write MongoDB queries",
+      "Fix UI bugs and accessibility issues"
+    ],
+    "qualifications": [
+      "JS, HTML, CSS proficiency",
+      "React basics",
+      "Node/Express basics",
+      "NoSQL understanding"
+    ],
+    "benefits": [
+      "Learning stipend",
+      "Health plan",
+      "Remote option",
+      "Wellness perks"
+    ],
+    "technologies": ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+    "salaryRange": {
+      "min": "4 LPA",
+      "max": "6.1 LPA",
+      "minLpa": 4,
+      "maxLpa": 6.1
+    },
+    "company": "AxyCube Solution",
+    "website": "https://axycube.com/",
+    "location": "Gurugram, Noida"
+  },
+  {
+    "positionName": "Full Stack Intern - Python + Next.js (Content)",
+    "aboutRole": "Assist in content platform features with Next.js frontend and Python APIs.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement Next.js pages",
+      "Add FastAPI endpoints",
+      "Write PostgreSQL queries",
+      "Support test automation"
+    ],
+    "qualifications": [
+      "React/Next basics",
+      "Python familiarity",
+      "SQL basics",
+      "Git and PR etiquette"
+    ],
+    "benefits": [
+      "Mentor guidance",
+      "Learning budget",
+      "Medical benefits",
+      "Hybrid model"
+    ],
+    "technologies": ["Next.js", "React", "FastAPI", "Python", "PostgreSQL"],
+    "salaryRange": {
+      "min": "7.2 LPA",
+      "max": "7.5 LPA",
+      "minLpa": 7.2,
+      "maxLpa": 7.5
+    },
+    "company": "Bayarea Technology Solutions",
+    "website": "https://bayareatechsol.com/about-us/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Associate Developer - MEAN (Dashboards)",
+    "aboutRole": "Contribute to admin dashboards with Angular and Node.js APIs on MongoDB.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build Angular tables and filters",
+      "Write Express middleware",
+      "Setup MongoDB validation",
+      "Add unit tests"
+    ],
+    "qualifications": [
+      "Angular basics",
+      "Node/Express fundamentals",
+      "NoSQL understanding",
+      "Testing basics"
+    ],
+    "benefits": [
+      "Training tracks",
+      "Health insurance",
+      "Flexible hours",
+      "Team activities"
+    ],
+    "technologies": ["Angular", "Node.js", "Express", "MongoDB", "TypeScript"],
+    "salaryRange": {
+      "min": "3.8 LPA",
+      "max": "4.2 LPA",
+      "minLpa": 3.8,
+      "maxLpa": 4.2
+    },
+    "company": "Bayone Solutions",
+    "website": "https://bayone.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Engineer - Java + React + PostgreSQL",
+    "aboutRole": "Work on a customer portal using Java microservices with a React frontend and Postgres.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop Spring controllers",
+      "Build React views",
+      "Write SQL queries",
+      "Participate in QA cycles"
+    ],
+    "qualifications": [
+      "Java basics",
+      "React basics",
+      "SQL familiarity",
+      "Understanding of REST"
+    ],
+    "benefits": [
+      "Mentor pairing",
+      "Insurance cover",
+      "Learning stipend",
+      "Hybrid work"
+    ],
+    "technologies": ["Java", "Spring Boot", "React", "PostgreSQL", "REST"],
+    "salaryRange": {
+      "min": "3.9 LPA",
+      "max": "5.9 LPA",
+      "minLpa": 3.9,
+      "maxLpa": 5.9
+    },
+    "company": "Bitespeed",
+    "website": "https://www.bitespeed.co/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Fresher - Next.js + Prisma",
+    "aboutRole": "Build full-stack features with Next.js app router and Prisma ORM on Postgres.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create API route handlers",
+      "Write Prisma schemas and queries",
+      "Implement UI forms and validation",
+      "Help with unit tests"
+    ],
+    "qualifications": [
+      "React/Next basics",
+      "TypeScript familiarity",
+      "SQL understanding",
+      "Git workflow"
+    ],
+    "benefits": [
+      "Learning budget",
+      "Remote-friendly",
+      "Healthcare",
+      "Team meetups"
+    ],
+    "technologies": ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL"],
+    "salaryRange": {
+      "min": "3 LPA",
+      "max": "4.5 LPA",
+      "minLpa": 3,
+      "maxLpa": 4.5
+    },
+    "company": "Bounteous Accolite",
+    "website": "https://www.bounteous.com/",
+    "location": "Chennai, Bangalore, Gurugram"
+  },
+  {
+    "positionName": "Graduate Developer - Python + AWS (Serverless)",
+    "aboutRole": "Support serverless Python APIs on AWS with a minimal JS frontend.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write Lambda functions in Python",
+      "Integrate API Gateway routes",
+      "Add simple UI components",
+      "Assist with IaC templates"
+    ],
+    "qualifications": [
+      "Python basics",
+      "Cloud interest",
+      "JS/HTML/CSS basics",
+      "Git familiarity"
+    ],
+    "benefits": [
+      "AWS credits",
+      "Hybrid/WFH",
+      "Medical insurance",
+      "Learning stipend"
+    ],
+    "technologies": ["Python", "AWS Lambda", "API Gateway", "S3", "React"],
+    "salaryRange": {
+      "min": "4.1 LPA",
+      "max": "6.5 LPA",
+      "minLpa": 4.1,
+      "maxLpa": 6.5
+    },
+    "company": "Brightpath AI",
+    "website": "https://bright-path-ai.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Junior Full Stack - MEAN + Docker",
+    "aboutRole": "Work on containerized Angular and Node.js services with MongoDB storage.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Angular components",
+      "Add Express routes",
+      "Write MongoDB queries",
+      "Assist Dockerfile and compose edits"
+    ],
+    "qualifications": [
+      "Angular basics",
+      "Node fundamentals",
+      "NoSQL understanding",
+      "Docker basics"
+    ],
+    "benefits": [
+      "Mentor support",
+      "Learning funds",
+      "Health plan",
+      "Flexible hours"
+    ],
+    "technologies": ["Angular", "Node.js", "Express", "MongoDB", "Docker"],
+    "salaryRange": {
+      "min": "3 LPA",
+      "max": "4.4 LPA",
+      "minLpa": 3,
+      "maxLpa": 4.4
+    },
+    "company": "Brisk Mind",
+    "website": "https://www.briskmind.in/",
+    "location": "Gurugram, Noida"
+  },
+  {
+    "positionName": "Associate Engineer - Java + Thymeleaf + REST",
+    "aboutRole": "Support a traditional Java web stack with Spring MVC and a gradual migration to React.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement Spring MVC controllers",
+      "Build basic Thymeleaf templates",
+      "Write MySQL queries",
+      "Assist migration tasks to React"
+    ],
+    "qualifications": [
+      "Java basics",
+      "HTML/CSS/JS",
+      "SQL familiarity",
+      "Willingness to learn React"
+    ],
+    "benefits": [
+      "Mentorship",
+      "Learning stipend",
+      "Health cover",
+      "Hybrid schedule"
+    ],
+    "technologies": ["Java", "Spring Boot", "Spring MVC", "Thymeleaf", "MySQL"],
+    "salaryRange": {
+      "min": "4.5 LPA",
+      "max": "4.8 LPA",
+      "minLpa": 4.5,
+      "maxLpa": 4.8
+    },
+    "company": "Bytespoke",
+    "website": "https://bytespoke.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Fresher - React + Node + PostgreSQL",
+    "aboutRole": "Contribute to a product team building React UIs and Node APIs backed by Postgres.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build React components and state",
+      "Add Express API endpoints",
+      "Write SQL and migrations",
+      "Support unit/integration tests"
+    ],
+    "qualifications": [
+      "JS/React basics",
+      "Node/Express basics",
+      "SQL familiarity",
+      "Git usage"
+    ],
+    "benefits": [
+      "Learning credits",
+      "Medical insurance",
+      "WFH policy",
+      "Team outings"
+    ],
+    "technologies": ["React", "Node.js", "Express", "PostgreSQL", "Jest"],
+    "salaryRange": {
+      "min": "3.4 LPA",
+      "max": "5.9 LPA",
+      "minLpa": 3.4,
+      "maxLpa": 5.9
+    },
+    "company": "Capco",
+    "website": "https://www.capco.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Graduate Full Stack - Python + React Native (Web-first)",
+    "aboutRole": "Assist in building web-first features with a pathway to mobile using React Native.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write FastAPI endpoints",
+      "Build React UI components",
+      "Add Postgres queries",
+      "Explore basic RN components"
+    ],
+    "qualifications": [
+      "Python basics",
+      "React familiarity",
+      "SQL knowledge",
+      "Interest in mobile"
+    ],
+    "benefits": [
+      "Mentor track",
+      "Learning stipend",
+      "Hybrid/WFH",
+      "Health plan"
+    ],
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "React Native"
+    ],
+    "salaryRange": {
+      "min": "5.7 LPA",
+      "max": "6.4 LPA",
+      "minLpa": 5.7,
+      "maxLpa": 6.4
+    },
+    "company": "Capegemini",
+    "website": "https://www.capgemini.com/",
+    "location": "All India"
+  },
+  {
+    "positionName": "Associate Web Engineer - Next.js + Tailwind + Node",
+    "aboutRole": "Build sleek UIs with Tailwind and Next.js while learning Node.js backend patterns.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement responsive layouts",
+      "Add simple API routes",
+      "Write basic SQL/NoSQL queries",
+      "Fix UI bugs and lighthouse issues"
+    ],
+    "qualifications": [
+      "HTML/CSS/JS proficiency",
+      "React/Next basics",
+      "Database basics",
+      "Version control"
+    ],
+    "benefits": [
+      "Learning budget",
+      "Medical insurance",
+      "Remote-friendly",
+      "Wellness stipend"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "salaryRange": {
+      "min": "3.9 LPA",
+      "max": "5.3 LPA",
+      "minLpa": 3.9,
+      "maxLpa": 5.3
+    },
+    "company": "Carelon Global Solution",
+    "website": "https://www.carelonglobal.in/",
+    "location": "Gurugram, Bangalore"
+  },
+  {
+    "positionName": "Junior Full Stack - Java + GraphQL + React",
+    "aboutRole": "Support a GraphQL gateway atop Java microservices, consumed by a React UI.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Java resolvers/services",
+      "Integrate React with Apollo",
+      "Write Postgres queries",
+      "Assist with schema documentation"
+    ],
+    "qualifications": [
+      "Java basics",
+      "React basics",
+      "Understanding of GraphQL concepts",
+      "SQL familiarity"
+    ],
+    "benefits": [
+      "Mentor-led onboarding",
+      "Learning credits",
+      "Hybrid work",
+      "Medical benefits"
+    ],
+    "technologies": [
+      "Java",
+      "Spring Boot",
+      "GraphQL",
+      "React",
+      "PostgreSQL",
+      "Apollo"
+    ],
+    "salaryRange": {
+      "min": "4.3 LPA",
+      "max": "7 LPA",
+      "minLpa": 4.3,
+      "maxLpa": 7
+    },
+    "company": "Carnation Infotech",
+    "website": "https://carnationinfotech.com/",
+    "location": "Bangalore, Lucknow"
+  },
+  {
+    "positionName": "Full Stack Intern - Python + MongoDB + Next.js",
+    "aboutRole": "Contribute to content workflows using Python APIs, MongoDB, and Next.js pages.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Flask/FastAPI endpoints",
+      "Design MongoDB collections",
+      "Build Next.js forms",
+      "Write unit tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "NoSQL familiarity",
+      "React/Next basics",
+      "Git usage"
+    ],
+    "benefits": [
+      "Mentor support",
+      "Learning funds",
+      "WFH option",
+      "Health insurance"
+    ],
+    "technologies": ["Python", "Flask", "FastAPI", "MongoDB", "Next.js"],
+    "salaryRange": {
+      "min": "3.9 LPA",
+      "max": "5.6 LPA",
+      "minLpa": 3.9,
+      "maxLpa": 5.6
+    },
+    "company": "Cashinvoice",
+    "website": "https://www.cashinvoice.in/",
+    "location": "Bangalore, New Delhi"
+  },
+  {
+    "positionName": "Associate Developer - MEAN + CI/CD",
+    "aboutRole": "Help ship MEAN features with exposure to CI/CD and container workflows.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Angular components",
+      "Write Express controllers",
+      "Structure MongoDB data",
+      "Assist pipeline scripts"
+    ],
+    "qualifications": [
+      "Angular/TypeScript basics",
+      "Node fundamentals",
+      "Mongo basics",
+      "Curiosity about CI/CD"
+    ],
+    "benefits": [
+      "Learning stipend",
+      "Health benefits",
+      "Hybrid work",
+      "Team activities"
+    ],
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "CI/CD"
+    ],
+    "salaryRange": {
+      "min": "4.4 LPA",
+      "max": "7.2 LPA",
+      "minLpa": 4.4,
+      "maxLpa": 7.2
+    },
+    "company": "Cast Software",
+    "website": "https://www.castsoftware.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Junior Full Stack - Java + Redis + React",
+    "aboutRole": "Support caching-backed Java services and React features in a high-performance environment.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement Spring REST endpoints",
+      "Integrate Redis caching with guidance",
+      "Build React UI modules",
+      "Write basic unit tests"
+    ],
+    "qualifications": [
+      "Java basics",
+      "React basics",
+      "Understanding of caching concepts",
+      "Git skills"
+    ],
+    "benefits": [
+      "Mentorship",
+      "Learning credits",
+      "Medical insurance",
+      "Flexible timings"
+    ],
+    "technologies": ["Java", "Spring Boot", "Redis", "React", "MySQL"],
+    "salaryRange": {
+      "min": "3.3 LPA",
+      "max": "5.6 LPA",
+      "minLpa": 3.3,
+      "maxLpa": 5.6
+    },
+    "company": "Chetu",
+    "website": "https://www.chetu.com/",
+    "location": "All India"
+  },
+  {
+    "positionName": "Full Stack Fresher - Next.js + Node + AWS",
+    "aboutRole": "Work across Next.js frontends and Node APIs with basic AWS services exposure.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create responsive UI components",
+      "Add Express routes",
+      "Integrate with S3/Lambda",
+      "Write minimal tests"
+    ],
+    "qualifications": [
+      "JS/TS basics",
+      "React/Next knowledge",
+      "Cloud curiosity",
+      "Version control"
+    ],
+    "benefits": [
+      "Learning support",
+      "Health plan",
+      "Remote-friendly",
+      "Team meetups"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Node.js",
+      "Express",
+      "AWS S3",
+      "Lambda"
+    ],
+    "salaryRange": {
+      "min": "5.3 LPA",
+      "max": "7.8 LPA",
+      "minLpa": 5.3,
+      "maxLpa": 7.8
+    },
+    "company": "CIENA",
+    "website": "https://www.ciena.com/",
+    "location": "Gurugram, Pune"
+  },
+  {
+    "positionName": "Associate Engineer - Python + Celery + PostgreSQL",
+    "aboutRole": "Assist in background task processing with Python and Celery, plus simple React UIs.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write FastAPI/Django endpoints",
+      "Add Celery tasks with Redis broker",
+      "Create basic React forms",
+      "Write SQL queries"
+    ],
+    "qualifications": [
+      "Python fundamentals",
+      "Async/task queue basics",
+      "React/JS familiarity",
+      "SQL knowledge"
+    ],
+    "benefits": [
+      "Mentor pairing",
+      "Learning stipend",
+      "Hybrid work",
+      "Health insurance"
+    ],
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "Celery",
+      "Redis",
+      "PostgreSQL",
+      "React"
+    ],
+    "salaryRange": {
+      "min": "3.4 LPA",
+      "max": "4.2 LPA",
+      "minLpa": 3.4,
+      "maxLpa": 4.2
+    },
+    "company": "Circles",
+    "website": "https://circles.co/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Web Engineer - MERN + Cypress",
+    "aboutRole": "Help build MERN features with a focus on UI quality and end-to-end tests.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement React components",
+      "Create Express routes",
+      "Design MongoDB models",
+      "Write Cypress E2E tests"
+    ],
+    "qualifications": [
+      "JS/React basics",
+      "Node basics",
+      "NoSQL familiarity",
+      "Testing interest"
+    ],
+    "benefits": [
+      "Learning resources",
+      "Medical plan",
+      "WFH policy",
+      "Team events"
+    ],
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "Cypress"],
+    "salaryRange": {
+      "min": "3.5 LPA",
+      "max": "3.9 LPA",
+      "minLpa": 3.5,
+      "maxLpa": 3.9
+    },
+    "company": "Citiustech",
+    "website": "https://www.citiustech.com/",
+    "location": "Hybrid, Gurugram"
+  },
+  {
+    "positionName": "Full Stack Trainee - Java + Next.js + GraphQL",
+    "aboutRole": "Support a GraphQL-first stack with a Next.js UI backed by Java services.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Spring Boot resolvers/services",
+      "Consume GraphQL in Next.js",
+      "Write SQL queries",
+      "Update schema documentation"
+    ],
+    "qualifications": [
+      "Java basics",
+      "React/Next basics",
+      "GraphQL concepts",
+      "SQL familiarity"
+    ],
+    "benefits": [
+      "Mentor program",
+      "Learning stipend",
+      "Hybrid model",
+      "Health insurance"
+    ],
+    "technologies": ["Java", "Spring Boot", "GraphQL", "Next.js", "PostgreSQL"],
+    "salaryRange": {
+      "min": "3.7 LPA",
+      "max": "4.2 LPA",
+      "minLpa": 3.7,
+      "maxLpa": 4.2
+    },
+    "company": "Clifyx Technologies",
+    "website": "https://clifyx.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Associate Developer - Python + React (SaaS)",
+    "aboutRole": "Join a SaaS engineering team building Python microservices and React dashboards.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop RESTful APIs",
+      "Implement UI tables and filters",
+      "Write basic SQL",
+      "Contribute to unit tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "React/JS familiarity",
+      "SQL knowledge",
+      "Git skills"
+    ],
+    "benefits": [
+      "Learning credits",
+      "Health cover",
+      "Flexible hours",
+      "Remote-friendly"
+    ],
+    "technologies": ["Python", "FastAPI", "React", "PostgreSQL", "MySQL"],
+    "salaryRange": {
+      "min": "5.5 LPA",
+      "max": "7.2 LPA",
+      "minLpa": 5.5,
+      "maxLpa": 7.2
+    },
+    "company": "Cloudxtreme",
+    "website": "https://cloudxtreme.com/",
+    "location": "Bangalore, Hyderabad, Gurugram"
+  },
+  {
+    "positionName": "Junior Full Stack - MEAN + JWT",
+    "aboutRole": "Help implement authentication and CRUD modules using Angular and Node.js.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build Angular forms",
+      "Add Express auth routes",
+      "Manage MongoDB user data",
+      "Write unit tests"
+    ],
+    "qualifications": [
+      "Angular basics",
+      "Node/Express basics",
+      "Auth/JWT understanding",
+      "NoSQL familiarity"
+    ],
+    "benefits": [
+      "Mentor guidance",
+      "Learning stipend",
+      "Medical plan",
+      "Hybrid work"
+    ],
+    "technologies": ["Angular", "Node.js", "Express", "MongoDB", "JWT"],
+    "salaryRange": {
+      "min": "4.6 LPA",
+      "max": "7.2 LPA",
+      "minLpa": 4.6,
+      "maxLpa": 7.2
+    },
+    "company": "Cocubes",
+    "website": "https://www.cocubes.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Graduate Engineer - Java + AWS + PostgreSQL",
+    "aboutRole": "Support a cloud-hosted Java microservice platform with a simple React UI.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement Spring Boot APIs",
+      "Write SQL migrations",
+      "Assist with AWS deployment steps",
+      "Contribute to UI tweaks"
+    ],
+    "qualifications": [
+      "Java OOP",
+      "SQL familiarity",
+      "Cloud interest",
+      "JS basics"
+    ],
+    "benefits": [
+      "AWS learning path",
+      "Health insurance",
+      "Hybrid/WFH",
+      "Learning budget"
+    ],
+    "technologies": ["Java", "Spring Boot", "PostgreSQL", "AWS", "React"],
+    "salaryRange": {
+      "min": "3.2 LPA",
+      "max": "6.1 LPA",
+      "minLpa": 3.2,
+      "maxLpa": 6.1
+    },
+    "company": "Codersbrain",
+    "website": "https://www.codersbrain.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Fresher - Next.js + MySQL",
+    "aboutRole": "Deliver web features with Next.js frontends and a MySQL-backed API layer.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Next.js pages",
+      "Integrate APIs",
+      "Write MySQL queries",
+      "Fix UI issues"
+    ],
+    "qualifications": [
+      "React/Next basics",
+      "JS/TS fundamentals",
+      "SQL knowledge",
+      "Git usage"
+    ],
+    "benefits": [
+      "Learning credits",
+      "Health plan",
+      "Flexible hours",
+      "Remote policy"
+    ],
+    "technologies": ["Next.js", "React", "Node.js", "MySQL", "TypeScript"],
+    "salaryRange": {
+      "min": "3.6 LPA",
+      "max": "3.7 LPA",
+      "minLpa": 3.6,
+      "maxLpa": 3.7
+    },
+    "company": "Codilar",
+    "website": "https://www.codilar.com/",
+    "location": "Bangalore, Hyderabad, Gurugram"
+  },
+  {
+    "positionName": "Associate Engineer - Python + PostgreSQL + Docker",
+    "aboutRole": "Assist in containerized Python services with a small React admin UI.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Write FastAPI routes",
+      "Add SQL queries and migrations",
+      "Update Dockerfiles",
+      "Build simple React components"
+    ],
+    "qualifications": [
+      "Python basics",
+      "SQL familiarity",
+      "Docker basics",
+      "JS/React basics"
+    ],
+    "benefits": [
+      "Mentorship",
+      "Learning stipend",
+      "Hybrid work",
+      "Medical insurance"
+    ],
+    "technologies": ["Python", "FastAPI", "PostgreSQL", "Docker", "React"],
+    "salaryRange": {
+      "min": "4.4 LPA",
+      "max": "4.7 LPA",
+      "minLpa": 4.4,
+      "maxLpa": 4.7
+    },
+    "company": "Codvo",
+    "website": "https://www.codvo.ai/",
+    "location": "Bangalore, New Delhi"
+  },
+  {
+    "positionName": "Junior Full Stack - MERN + WebSockets",
+    "aboutRole": "Help implement real-time features using MERN and Socket.IO with guidance.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add React components for live updates",
+      "Implement Node.js socket handlers",
+      "Design MongoDB collections",
+      "Write basic unit tests"
+    ],
+    "qualifications": [
+      "JS/React basics",
+      "Node basics",
+      "Realtime/WebSocket concepts",
+      "NoSQL knowledge"
+    ],
+    "benefits": [
+      "Learning path",
+      "Medical cover",
+      "WFH support",
+      "Team activities"
+    ],
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
+    "salaryRange": {
+      "min": "4.5 LPA",
+      "max": "7.5 LPA",
+      "minLpa": 4.5,
+      "maxLpa": 7.5
+    },
+    "company": "Coforge",
+    "website": "https://www.coforge.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Trainee - Java + Kafka + React",
+    "aboutRole": "Learn event-driven patterns with Java and Kafka, and ship simple React UIs.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Spring Boot producers/consumers",
+      "Build React pages",
+      "Write Postgres queries",
+      "Assist with monitoring dashboards"
+    ],
+    "qualifications": [
+      "Java basics",
+      "React basics",
+      "Event streaming concepts",
+      "SQL familiarity"
+    ],
+    "benefits": [
+      "Mentor program",
+      "Learning credits",
+      "Health insurance",
+      "Hybrid model"
+    ],
+    "technologies": ["Java", "Spring Boot", "Kafka", "React", "PostgreSQL"],
+    "salaryRange": {
+      "min": "4 LPA",
+      "max": "7.4 LPA",
+      "minLpa": 4,
+      "maxLpa": 7.4
+    },
+    "company": "Cognitus",
+    "website": "https://cognitus.com/",
+    "location": "Bangalore, New Delhi"
+  },
+  {
+    "positionName": "Associate Developer - Python + GraphQL + Next.js",
+    "aboutRole": "Support GraphQL APIs in Python and consume them in Next.js UIs.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Strawberry/Graphene resolvers",
+      "Consume GraphQL with Apollo",
+      "Write SQL queries",
+      "Add component tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "GraphQL understanding",
+      "React/Next familiarity",
+      "SQL knowledge"
+    ],
+    "benefits": [
+      "Learning stipend",
+      "Medical plan",
+      "WFH option",
+      "Team offsites"
+    ],
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "GraphQL",
+      "Next.js",
+      "PostgreSQL",
+      "Apollo"
+    ],
+    "salaryRange": {
+      "min": "3.1 LPA",
+      "max": "7.1 LPA",
+      "minLpa": 3.1,
+      "maxLpa": 7.1
+    },
+    "company": "Comviva",
+    "website": "https://www.comviva.com/",
+    "location": "Hybrid, Gurugram"
+  },
+  {
+    "positionName": "Junior Full Stack - MEAN + Nginx",
+    "aboutRole": "Assist in shipping Angular apps with Node APIs and basic Nginx setups.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Develop Angular modules",
+      "Add Express routes",
+      "Work on MongoDB indexes",
+      "Help with Nginx config basics"
+    ],
+    "qualifications": [
+      "Angular basics",
+      "Node/Express basics",
+      "NoSQL familiarity",
+      "Web server concepts"
+    ],
+    "benefits": [
+      "Learning resources",
+      "Health insurance",
+      "Hybrid work",
+      "Wellness stipend"
+    ],
+    "technologies": ["Angular", "Node.js", "Express", "MongoDB", "Nginx"],
+    "salaryRange": {
+      "min": "4.1 LPA",
+      "max": "5.8 LPA",
+      "minLpa": 4.1,
+      "maxLpa": 5.8
+    },
+    "company": "Conduent",
+    "website": "https://www.conduent.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Fresher - Java + Next.js (FinTech)",
+    "aboutRole": "Contribute to FinTech modules using Spring Boot services and a Next.js UI.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement secure REST endpoints",
+      "Build form-heavy Next.js pages",
+      "Write Postgres queries",
+      "Support basic audits and logs"
+    ],
+    "qualifications": [
+      "Java basics",
+      "React/Next basics",
+      "SQL knowledge",
+      "Security awareness"
+    ],
+    "benefits": [
+      "Learning budget",
+      "Medical cover",
+      "Hybrid/WFH",
+      "Wellness perks"
+    ],
+    "technologies": ["Java", "Spring Boot", "Next.js", "PostgreSQL", "JWT"],
+    "salaryRange": {
+      "min": "5.2 LPA",
+      "max": "7.8 LPA",
+      "minLpa": 5.2,
+      "maxLpa": 7.8
+    },
+    "company": "Convergee Staffing Solutions",
+    "website": "https://convergetp.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Associate Engineer - Python + MySQL + React",
+    "aboutRole": "Help build CRUD-heavy modules with Python APIs and a lightweight React UI.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Flask routes",
+      "Write MySQL queries",
+      "Build React components",
+      "Add unit tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "SQL familiarity",
+      "React/JS basics",
+      "Git usage"
+    ],
+    "benefits": [
+      "Mentor pairing",
+      "Health insurance",
+      "Learning stipend",
+      "Hybrid policy"
+    ],
+    "technologies": ["Python", "Flask", "MySQL", "React", "pytest"],
+    "salaryRange": {
+      "min": "4.5 LPA",
+      "max": "7.1 LPA",
+      "minLpa": 4.5,
+      "maxLpa": 7.1
+    },
+    "company": "Coreops.ai",
+    "website": "https://www.coreops.ai/",
+    "location": "Gurugram, Bangalore"
+  },
+  {
+    "positionName": "Junior Engineer - MERN + PostgreSQL",
+    "aboutRole": "Work with MERN while also integrating certain modules with PostgreSQL for analytics.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build React components",
+      "Add Express routes",
+      "Use MongoDB for core data",
+      "Write Postgres queries for reports"
+    ],
+    "qualifications": [
+      "JS/React basics",
+      "Node basics",
+      "NoSQL and SQL familiarity",
+      "Git skills"
+    ],
+    "benefits": [
+      "Learning tracks",
+      "Health benefits",
+      "WFH flexibility",
+      "Team events"
+    ],
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "PostgreSQL"],
+    "salaryRange": {
+      "min": "3.7 LPA",
+      "max": "6.1 LPA",
+      "minLpa": 3.7,
+      "maxLpa": 6.1
+    },
+    "company": "Credera",
+    "website": "https://www.credera.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Full Stack Trainee - Java + MySQL + Vue",
+    "aboutRole": "Assist in Java APIs with a Vue/React front-end and MySQL persistence.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Create Spring endpoints",
+      "Write SQL queries",
+      "Build simple Vue components",
+      "Fix bugs and write tests"
+    ],
+    "qualifications": [
+      "Java basics",
+      "SQL familiarity",
+      "JS framework basics",
+      "Git knowledge"
+    ],
+    "benefits": [
+      "Mentorship",
+      "Health insurance",
+      "Learning stipend",
+      "Hybrid model"
+    ],
+    "technologies": ["Java", "Spring Boot", "MySQL", "Vue.js", "JUnit"],
+    "salaryRange": {
+      "min": "4.7 LPA",
+      "max": "4.9 LPA",
+      "minLpa": 4.7,
+      "maxLpa": 4.9
+    },
+    "company": "Crocus",
+    "website": "https://crocuslive.com/",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Associate Full Stack - Python + Next.js + S3",
+    "aboutRole": "Help implement media workflows with Python APIs and Next.js UI integrated with S3.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add FastAPI routes",
+      "Integrate S3 uploads",
+      "Create Next.js pages",
+      "Write unit tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "Cloud storage concepts",
+      "React/Next basics",
+      "Git skills"
+    ],
+    "benefits": [
+      "AWS credits",
+      "Medical plan",
+      "Flexible hours",
+      "Learning budget"
+    ],
+    "technologies": ["Python", "FastAPI", "AWS S3", "Next.js", "PostgreSQL"],
+    "salaryRange": {
+      "min": "3.8 LPA",
+      "max": "4.1 LPA",
+      "minLpa": 3.8,
+      "maxLpa": 4.1
+    },
+    "company": "Cropseed",
+    "website": "https://www.corpseed.com/",
+    "location": "Noida"
+  },
+  {
+    "positionName": "Junior Web Engineer - MEAN + PostgreSQL",
+    "aboutRole": "Contribute to Angular apps with Node APIs and a Postgres reporting layer.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build Angular pages",
+      "Add Express endpoints",
+      "Write SQL queries",
+      "Fix defects across stack"
+    ],
+    "qualifications": [
+      "Angular basics",
+      "Node basics",
+      "SQL familiarity",
+      "Git usage"
+    ],
+    "benefits": [
+      "Mentor guidance",
+      "Hybrid model",
+      "Health cover",
+      "Learning stipend"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "TypeScript"
+    ],
+    "salaryRange": {
+      "min": "3.3 LPA",
+      "max": "3.4 LPA",
+      "minLpa": 3.3,
+      "maxLpa": 3.4
+    },
+    "company": "Crowdstrike",
+    "website": "https://www.crowdstrike.com/en-us/?utm_campaign=brand&utm_content=crwd-brand-apj-ind-en-psp-x-x-x-tct-x_x_x_core-x&utm_medium=sem&utm_source=goog&utm_term=crowdstrike&cq_cmp=22070106717&cq_plac=&gad_source=1&gad_campaignid=22070106717&gbraid=0AAAAAC-K3YTyJvD4nzY5-Cz-EHl3jm7qQ&gclid=Cj0KCQjw3OjGBhDYARIsADd-uX5xGDAbzpXZwwtEWRzTYZOiIc92tvVxhj3NVCmnTG4hUPS898JIG1UaAnr7EALw_wcB",
+    "location": "Bangalore"
+  },
+  {
+    "positionName": "Full Stack Fresher - Java + React + MongoDB",
+    "aboutRole": "Help deliver user features with a Java backend and a React/MongoDB front.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement Spring REST APIs",
+      "Build React components",
+      "Create MongoDB models",
+      "Write unit tests"
+    ],
+    "qualifications": [
+      "Java basics",
+      "React/JS basics",
+      "NoSQL familiarity",
+      "Git skills"
+    ],
+    "benefits": [
+      "Learning credits",
+      "Medical plan",
+      "WFH option",
+      "Team activities"
+    ],
+    "technologies": ["Java", "Spring Boot", "React", "MongoDB", "JUnit"],
+    "salaryRange": {
+      "min": "3.5 LPA",
+      "max": "5.6 LPA",
+      "minLpa": 3.5,
+      "maxLpa": 5.6
+    },
+    "company": "CTDI",
+    "website": "https://www.ctdi.in/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Associate Engineer - Python + Redis + Next.js",
+    "aboutRole": "Assist in caching-aware Python services and Next.js pages for performance.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add FastAPI endpoints",
+      "Use Redis for caching",
+      "Build Next.js components",
+      "Write SQL queries"
+    ],
+    "qualifications": [
+      "Python basics",
+      "Caching concepts",
+      "React/Next basics",
+      "SQL knowledge"
+    ],
+    "benefits": [
+      "Mentor support",
+      "Health insurance",
+      "Learning stipend",
+      "Hybrid"
+    ],
+    "technologies": ["Python", "FastAPI", "Redis", "Next.js", "PostgreSQL"],
+    "salaryRange": {
+      "min": "3.3 LPA",
+      "max": "4.6 LPA",
+      "minLpa": 3.3,
+      "maxLpa": 4.6
+    },
+    "company": "Cubsation Consulting",
+    "website": "https://cubastion.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Junior Full Stack - MERN + Auth",
+    "aboutRole": "Work on authentication flows and dashboards in a MERN-based SaaS product.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement login/signup UIs",
+      "Create auth routes in Node/Express",
+      "Manage MongoDB user data",
+      "Write unit tests"
+    ],
+    "qualifications": [
+      "JS/React basics",
+      "Node/Express basics",
+      "Auth/JWT basics",
+      "NoSQL knowledge"
+    ],
+    "benefits": [
+      "Learning resources",
+      "Medical coverage",
+      "Hybrid/WFH",
+      "Team offsites"
+    ],
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    "salaryRange": {
+      "min": "6.4 LPA",
+      "max": "7 LPA",
+      "minLpa": 6.4,
+      "maxLpa": 7
+    },
+    "company": "CVENT",
+    "website": "https://www.cvent.com/",
+    "location": "Hybrid, Gurugram"
+  },
+  {
+    "positionName": "Full Stack Trainee - Java + CI/CD + React",
+    "aboutRole": "Support CI-friendly Java services and React UIs with incremental delivery.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Add Spring services",
+      "Write MySQL scripts",
+      "Build React components",
+      "Assist CI scripts"
+    ],
+    "qualifications": [
+      "Java basics",
+      "SQL familiarity",
+      "React/JS basics",
+      "CI/CD curiosity"
+    ],
+    "benefits": [
+      "Learning stipend",
+      "Health insurance",
+      "Hybrid work",
+      "Wellness perks"
+    ],
+    "technologies": ["Java", "Spring Boot", "MySQL", "React", "CI/CD"],
+    "salaryRange": {
+      "min": "5.1 LPA",
+      "max": "7 LPA",
+      "minLpa": 5.1,
+      "maxLpa": 7
+    },
+    "company": "Daftar Route",
+    "website": "https://www.daftarroute.com/",
+    "location": "Gurugram"
+  },
+  {
+    "positionName": "Associate Developer - Python + Next.js + PostgreSQL",
+    "aboutRole": "Help build full-stack features with Python APIs and Next.js pages backed by Postgres.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Implement FastAPI routes",
+      "Write SQL queries",
+      "Build UI with components and forms",
+      "Fix bugs and write tests"
+    ],
+    "qualifications": [
+      "Python basics",
+      "SQL knowledge",
+      "React/Next basics",
+      "Git usage"
+    ],
+    "benefits": ["Mentorship", "Health cover", "Learning budget", "Hybrid/WFH"],
+    "technologies": ["Python", "FastAPI", "PostgreSQL", "Next.js", "React"],
+    "salaryRange": {
+      "min": "6 LPA",
+      "max": "6.6 LPA",
+      "minLpa": 6,
+      "maxLpa": 6.6
+    },
+    "company": "Daikin",
+    "website": "https://www.daikin.com/",
+    "location": "Gurugram, Noida"
+  },
+  {
+    "positionName": "Junior Engineer - MEAN + Testing Library",
+    "aboutRole": "Contribute to Angular apps with good coverage using Testing Library and Karma.",
+    "experience": "Fresher (0-1 year)",
+    "responsibilities": [
+      "Build Angular components",
+      "Write Express APIs",
+      "Model MongoDB data",
+      "Add UI unit tests"
+    ],
+    "qualifications": [
+      "Angular basics",
+      "Node basics",
+      "NoSQL familiarity",
+      "Testing interest"
+    ],
+    "benefits": [
+      "Learning support",
+      "Medical plan",
+      "Hybrid schedule",
+      "Team events"
+    ],
+    "technologies": [
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Testing Library",
+      "Karma"
+    ],
+    "salaryRange": {
+      "min": "6.1 LPA",
+      "max": "6.9 LPA",
+      "minLpa": 6.1,
+      "maxLpa": 6.9
+    },
+    "company": "Databuzz",
+    "website": "https://www.databuzzltd.com/",
+    "location": "Hybrid, Gurugram"
+  }
+]
