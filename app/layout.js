@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Fresher Jobs & Graduate Opportunities | Job4Grads",
   description:
-    "Find your first job faster with Job4Grads. Get intelligent job matching, resume support, and guaranteed interview opportunities with top startups and MNCs.",
+    "Find your first job faster with Job4Grads. Get intelligent job matching, resume support, and interview opportunities with top startups and MNCs.",
 };
 
 export default function RootLayout({ children }) {

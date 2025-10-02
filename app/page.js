@@ -216,8 +216,7 @@ function Hero() {
           <p className="mt-4 text-white/90">
             Struggling to get interview calls as a fresher? Job4Grads helps you
             showcase your profile, get matched with the right jobs, and secure
-            guaranteed interviews at top startups and MNCs — all in one
-            platform.
+            interviews at top startups and MNCs — all in one platform.
           </p>
         </div>
 

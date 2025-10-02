@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-          <p>© {new Date().getFullYear()} JobHub. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Job4Grads. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="/privacy-policy">Privacy</a>
             <a href="/terms-conditions">Terms</a>

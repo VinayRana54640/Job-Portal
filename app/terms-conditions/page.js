@@ -307,9 +307,8 @@ function TermsBody() {
             </h3>
             <ul className="list-disc ml-6 text-slate-700 space-y-2 mt-2">
               <li>
-                “Guaranteed interview calls” or premium features are subject to
-                eligibility, verification, and fair-use limits disclosed at
-                purchase.
+                Premium features are subject to eligibility, verification, and
+                fair-use limits disclosed at purchase.
               </li>
               <li>
                 Resume builder outputs and templates are provided for

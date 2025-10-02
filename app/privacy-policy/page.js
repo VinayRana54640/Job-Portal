@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -167,7 +168,7 @@ function PrivacyContent() {
             </p>
             <p className="mt-2 font-medium">
               Email: support@job4grads.com
-              <br /> Address: Job4Grads HQ, Bengaluru, India
+              {/* <br /> Address: Job4Grads HQ, Bengaluru, India */}
             </p>
           </div>
         </div>
@@ -176,26 +177,26 @@ function PrivacyContent() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-slate-200 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 flex flex-col gap-4 text-center text-sm text-slate-600">
-        <p>© {new Date().getFullYear()} Job4Grads. All rights reserved.</p>
-        <div className="flex justify-center gap-4">
-          <a href="/privacy" className="hover:underline">
-            Privacy
-          </a>
-          <a href="/terms" className="hover:underline">
-            Terms
-          </a>
-          <a href="/cookies" className="hover:underline">
-            Cookies
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
-}
+// function Footer() {
+//   return (
+//     <footer className="border-t border-slate-200 bg-white">
+//       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 flex flex-col gap-4 text-center text-sm text-slate-600">
+//         <p>© {new Date().getFullYear()} Job4Grads. All rights reserved.</p>
+//         <div className="flex justify-center gap-4">
+//           <a href="/privacy" className="hover:underline">
+//             Privacy
+//           </a>
+//           <a href="/terms" className="hover:underline">
+//             Terms
+//           </a>
+//           <a href="/cookies" className="hover:underline">
+//             Cookies
+//           </a>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// }
 
 export default function PrivacyPage() {
   const router = useRouter();
