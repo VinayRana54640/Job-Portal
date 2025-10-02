@@ -3,15 +3,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import api from "../../utils/axiosClient";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-/**
- * Notes:
- * - Mobile-first responsive adjustments without changing visual theme.
- * - Adds mobile filter drawer (off-canvas) while keeping desktop sidebar intact.
- * - Prevents overflow with min-w-0, truncate, shrink-0, and responsive grids.
- * - Uses responsive line clamp utilities where appropriate.
- * - Keep Tailwind plugin @tailwindcss/line-clamp enabled if used in project.
- */
+
 export const dynamic = "force-dynamic";
+
 const MOCK_JOBS = [
   {
     id: "jb_1",
@@ -145,77 +139,100 @@ function JobCard({ job }) {
   return (
     <a
       href={`/jobdescription?id=${job.id}`}
-      className={`group rounded-xl border p-5 flex flex-col sm:flex-row gap-4 hover:shadow-lg transition relative ${
+      className={`group rounded-xl border p-4 sm:p-5 flex flex-col gap-3 sm:gap-4 hover:shadow-lg transition relative ${
         job.featured ? "border-slate-900" : "border-slate-200"
       }`}
       aria-label={`${job.title} at ${job.company}`}
     >
-      <img
-        src={job.logo}
-        alt={job.company}
-        className="h-12 w-12 rounded bg-white border border-slate-200 object-contain shrink-0"
-      />
-      <div className="flex-1 min-w-0">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <h3 className="text-lg font-semibold text-slate-900 group-hover:underline truncate">
-              {job.title}
-            </h3>
-            <p className="text-slate-600 truncate">
-              {job.company} • {job.location}
-            </p>
-          </div>
-          <div className="text-sm text-slate-700 whitespace-nowrap">
-            {formatSalaryINR(job.salaryMin, job.salaryMax)}
-          </div>
+      {/* Mobile: Vertical layout, Desktop: Horizontal */}
+      <div className="flex gap-3 sm:gap-4 items-start">
+        <img
+          src={job.logo}
+          alt={job.company}
+          className="h-10 w-10 sm:h-12 sm:w-12 rounded bg-white border border-slate-200 object-contain shrink-0"
+        />
+        <div className="flex-1 min-w-0">
+          <h3 className="text-base sm:text-lg font-semibold text-slate-900 group-hover:underline line-clamp-2">
+            {job.title}
+          </h3>
+          <p className="text-sm text-slate-600 truncate mt-0.5">
+            {job.company}
+          </p>
+          <p className="text-xs sm:text-sm text-slate-500 truncate mt-0.5">
+            {job.location}
+          </p>
         </div>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {job.tags.map((t) => (
-            <span
-              key={t}
-              className="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs"
-            >
-              {t}
-            </span>
-          ))}
-          <span className="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs">
-            {job.type}
+        {/* Salary - hide on very small screens, show on sm+ */}
+        <div className="hidden sm:block text-sm font-medium text-slate-700 whitespace-nowrap shrink-0">
+          {formatSalaryINR(job.salaryMin, job.salaryMax)}
+        </div>
+      </div>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+        {job.tags.slice(0, 3).map((t) => (
+          <span
+            key={t}
+            className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-slate-100 text-slate-700 text-xs"
+          >
+            {t}
           </span>
-          {job.remote && (
-            <span className="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs">
-              Remote
-            </span>
-          )}
-          {job.featured && (
-            <span className="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 text-xs">
-              Featured
-            </span>
-          )}
-        </div>
-        <p className="mt-3 text-sm text-slate-700 line-clamp-3 md:line-clamp-2">
-          {job.description}
-        </p>
-        <div className="mt-3 text-xs text-slate-500">
-          Posted {new Date(job.postedAt).toLocaleDateString()}
-        </div>
+        ))}
+        <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs">
+          {job.type}
+        </span>
+        {job.remote && (
+          <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-blue-50 text-blue-700 text-xs">
+            Remote
+          </span>
+        )}
+        {job.featured && (
+          <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-amber-50 text-amber-700 text-xs">
+            Featured
+          </span>
+        )}
       </div>
-      <div className="shrink-0">
-        <button className="w-full sm:w-auto rounded-lg bg-slate-900 text-white px-4 py-2 hover:bg-slate-800">
-          Quick Apply
-        </button>
+
+      {/* Description - hide on mobile, show on md+ */}
+      <p className="hidden md:block text-sm text-slate-700 line-clamp-2">
+        {job.description}
+      </p>
+
+      {/* Mobile salary and date row */}
+      <div className="flex items-center justify-between gap-2 sm:hidden text-xs text-slate-500">
+        <span>{formatSalaryINR(job.salaryMin, job.salaryMax)}</span>
+        <span>Posted {new Date(job.postedAt).toLocaleDateString()}</span>
       </div>
+
+      {/* Desktop date */}
+      <div className="hidden sm:block text-xs text-slate-500">
+        Posted {new Date(job.postedAt).toLocaleDateString()}
+      </div>
+
+      {/* Quick Apply Button */}
+      <button
+        className="w-full sm:absolute sm:right-5 sm:top-5 sm:w-auto rounded-lg bg-slate-900 text-white px-4 py-2 text-sm hover:bg-slate-800 transition"
+        onClick={(e) => {
+          e.preventDefault();
+          // Handle quick apply
+        }}
+      >
+        Quick Apply
+      </button>
     </a>
   );
 }
 
 function FacetGroup({ title, children, onClear, hasActive }) {
   return (
-    <div className="border-b border-slate-200 pb-5">
+    <div className="border-b border-slate-200 pb-4 sm:pb-5">
       <div className="flex items-center justify-between">
-        <h4 className="font-semibold text-slate-900">{title}</h4>
+        <h4 className="font-semibold text-slate-900 text-sm sm:text-base">
+          {title}
+        </h4>
         {hasActive && (
           <button
-            className="text-sm text-slate-600 hover:underline"
+            className="text-xs sm:text-sm text-slate-600 hover:underline"
             onClick={onClear}
             type="button"
           >
@@ -223,7 +240,7 @@ function FacetGroup({ title, children, onClear, hasActive }) {
           </button>
         )}
       </div>
-      <div className="mt-3 space-y-2">{children}</div>
+      <div className="mt-2 sm:mt-3 space-y-2">{children}</div>
     </div>
   );
 }
@@ -259,22 +276,22 @@ export default function JobList() {
     };
   }, []);
 
-  const [q, setQ] = useState(initial?.q || ""); // default to empty string
-  const [loc, setLoc] = useState(initial?.loc || ""); // default to empty string
-  const [remote, setRemote] = useState(initial?.remote || false); // default to false
-  const [types, setTypes] = useState(initial?.types || []); // default to empty array
-  const [exps, setExps] = useState(initial?.exps || []); // default to empty array
+  const [q, setQ] = useState(initial?.q || "");
+  const [loc, setLoc] = useState(initial?.loc || "");
+  const [remote, setRemote] = useState(initial?.remote || false);
+  const [types, setTypes] = useState(initial?.types || []);
+  const [exps, setExps] = useState(initial?.exps || []);
   const [postedDays, setPostedDays] = useState(
     initial?.postedDays != null ? initial.postedDays : null
-  ); // null if undefined
+  );
   const [minSalary, setMinSalary] = useState(initial?.minSalary || 0);
   const [maxSalary, setMaxSalary] = useState(initial?.maxSalary || 0);
-  const [tags, setTags] = useState(initial?.tags || []); // empty array default
+  const [tags, setTags] = useState(initial?.tags || []);
   const [sort, setSort] = useState(initial?.sort || "relevance");
   const [page, setPage] = useState(initial?.page || 1);
   const [jobs, setJobs] = useState([]);
 
-  // Debounced values (safe now)
+  // Debounced values
   const debouncedQ = useDebounced(q, 300);
   const debouncedLoc = useDebounced(loc, 300);
 
@@ -289,7 +306,9 @@ export default function JobList() {
       const res = await api.get("/api/jobs?action=getAll");
       console.log("check the response...", res);
       setJobs(res.data.formattedJobs || []);
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error fetching jobs:", error);
+    }
   };
 
   // URL update
@@ -348,11 +367,8 @@ export default function JobList() {
         (city === "remote" && job.remote);
 
       const remoteOk = !remote || job.remote;
-
       const typeOk = !types.length || types.includes(job.type);
-
       const expOk = !exps.length || exps.includes(job.experience);
-
       const tagOk =
         !tags.length ||
         tags.some((t) =>
@@ -445,73 +461,50 @@ export default function JobList() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      {/* <header className="sticky top-0 z-30 backdrop-blur bg-white/80 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 min-w-0">
-            <img
-              src="https://logo.clearbit.com/recruit-holdings.com"
-              alt="JobHub"
-              className="h-8 w-8 rounded shrink-0"
-            />
-            <span className="font-semibold text-slate-900 truncate">
-              JobHub
-            </span>
-          </a>
 
-          <div className="hidden md:flex gap-2">
+      {/* Mobile Search Bar */}
+      <div className="lg:hidden sticky top-0 z-30 bg-white border-b border-slate-200 px-3 sm:px-4 py-3">
+        <div className="flex gap-2">
+          <div className="flex-1 flex gap-2">
             <input
+              type="text"
+              placeholder="Job title or keyword"
+              className="flex-1 text-sm rounded-lg border border-slate-300 px-3 py-2 min-w-0"
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Search title, company, skills"
-              className="rounded-lg border border-slate-300 px-4 py-2 outline-none focus:ring-2 focus:ring-slate-900 w-56 lg:w-72"
             />
             <input
+              type="text"
+              placeholder="Location"
+              className="w-24 sm:w-32 text-sm rounded-lg border border-slate-300 px-3 py-2"
               value={loc}
               onChange={(e) => setLoc(e.target.value)}
-              placeholder="Location or Remote"
-              className="rounded-lg border border-slate-300 px-4 py-2 outline-none focus:ring-2 focus:ring-slate-900 w-44 lg:w-56"
             />
-            <button
-              className="rounded-lg bg-slate-900 text-white px-5 py-2 hover:bg-slate-800"
-              onClick={() => {}}
+          </div>
+          <button
+            className="rounded-lg bg-slate-900 text-white px-3 sm:px-4 py-2 hover:bg-slate-800 shrink-0 flex items-center gap-1.5"
+            onClick={() => setDrawerOpen(true)}
+            aria-label="Open filters"
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              Search
-            </button>
-          </div>
-
-          <div className="md:hidden flex items-center gap-3">
-            <button
-              className="rounded-lg border border-slate-300 text-slate-700 px-3 py-2"
-              onClick={() => setDrawerOpen(true)}
-              aria-label="Open filters"
-            >
-              Filters
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              />
+            </svg>
+            <span className="text-sm hidden sm:inline">Filters</span>
+          </button>
         </div>
+      </div>
 
-        <div className="md:hidden border-t border-slate-200">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row gap-2">
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Search title, company, skills"
-              className="w-full rounded-lg border border-slate-300 px-4 py-2 outline-none focus:ring-2 focus:ring-slate-900"
-            />
-            <input
-              value={loc}
-              onChange={(e) => setLoc(e.target.value)}
-              placeholder="Location or Remote"
-              className="w-full sm:flex-1 rounded-lg border border-slate-300 px-4 py-2 outline-none focus:ring-2 focus:ring-slate-900"
-            />
-            <button className="w-full sm:w-auto rounded-lg bg-slate-900 text-white px-5 py-2 hover:bg-slate-800">
-              Search
-            </button>
-          </div>
-        </div>
-      </header> */}
-
-      <main className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 grid lg:grid-cols-12 gap-8">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 grid lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8">
         {/* Sidebar desktop */}
         <aside className="hidden lg:block lg:col-span-3">
           <div className="rounded-2xl border border-slate-200 p-5 sticky top-20">
@@ -542,15 +535,18 @@ export default function JobList() {
 
         {/* Results */}
         <section className="lg:col-span-9">
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-            <div className="text-slate-700">
+          {/* Results header */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3 sm:mb-4">
+            <div className="text-sm sm:text-base text-slate-700">
               <span className="font-semibold text-slate-900">{total}</span> jobs
               found
             </div>
             <div className="flex items-center gap-2">
-              <label className="text-sm text-slate-700">Sort</label>
+              <label className="text-xs sm:text-sm text-slate-700 shrink-0">
+                Sort by:
+              </label>
               <select
-                className="rounded-lg border border-slate-300 px-3 py-2"
+                className="text-sm rounded-lg border border-slate-300 px-2 sm:px-3 py-1.5 sm:py-2 flex-1 sm:flex-none"
                 value={sort}
                 onChange={(e) => setSort(e.target.value)}
               >
@@ -562,8 +558,8 @@ export default function JobList() {
             </div>
           </div>
 
-          {/* Active chips */}
-          <div className="flex flex-wrap gap-2 mb-4">
+          {/* Active filter chips */}
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
             {remote && <Chip onClose={() => setRemote(false)}>Remote</Chip>}
             {types.map((t) => (
               <Chip
@@ -604,69 +600,63 @@ export default function JobList() {
                 {POSTED.find((p) => p.days === postedDays)?.label || "Any time"}
               </Chip>
             )}
-            {(q || loc) && (
-              <Chip
-                onClose={() => {
-                  setQ("");
-                  setLoc("");
-                }}
-              >
-                {q || "Any"} • {loc || "Anywhere"}
-              </Chip>
-            )}
           </div>
 
-          {/* List */}
-          <div className="grid gap-4">
+          {/* Job List */}
+          <div className="grid gap-3 sm:gap-4">
             {paged.map((job) => (
               <JobCard key={job.id} job={job} />
             ))}
             {!paged.length && (
-              <div className="rounded-xl border border-slate-200 p-8 text-center text-slate-600">
+              <div className="rounded-xl border border-slate-200 p-6 sm:p-8 text-center text-slate-600 text-sm sm:text-base">
                 No results match the current filters. Try removing some filters.
               </div>
             )}
           </div>
 
           {/* Pagination */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <button
-              disabled={pageClamped <= 1}
-              onClick={() => setPage((p) => Math.max(1, p - 1))}
-              className={`w-full sm:w-auto px-4 py-2 rounded-lg border ${
-                pageClamped <= 1
-                  ? "border-slate-200 text-slate-400 cursor-not-allowed"
-                  : "border-slate-300 text-slate-700 hover:bg-white"
-              }`}
-            >
-              Previous
-            </button>
-            <div className="text-slate-700">
-              Page{" "}
-              <span className="font-semibold text-slate-900">
-                {pageClamped}
-              </span>{" "}
-              of{" "}
-              <span className="font-semibold text-slate-900">{totalPages}</span>
+          {totalPages > 1 && (
+            <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <button
+                disabled={pageClamped <= 1}
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                className={`w-full sm:w-auto px-4 py-2 rounded-lg border text-sm ${
+                  pageClamped <= 1
+                    ? "border-slate-200 text-slate-400 cursor-not-allowed"
+                    : "border-slate-300 text-slate-700 hover:bg-slate-50"
+                }`}
+              >
+                Previous
+              </button>
+              <div className="text-sm text-slate-700">
+                Page{" "}
+                <span className="font-semibold text-slate-900">
+                  {pageClamped}
+                </span>{" "}
+                of{" "}
+                <span className="font-semibold text-slate-900">
+                  {totalPages}
+                </span>
+              </div>
+              <button
+                disabled={pageClamped >= totalPages}
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                className={`w-full sm:w-auto px-4 py-2 rounded-lg border text-sm ${
+                  pageClamped >= totalPages
+                    ? "border-slate-200 text-slate-400 cursor-not-allowed"
+                    : "border-slate-300 text-slate-700 hover:bg-slate-50"
+                }`}
+              >
+                Next
+              </button>
             </div>
-            <button
-              disabled={pageClamped >= totalPages}
-              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-              className={`w-full sm:w-auto px-4 py-2 rounded-lg border ${
-                pageClamped >= totalPages
-                  ? "border-slate-200 text-slate-400 cursor-not-allowed"
-                  : "border-slate-300 text-slate-700 hover:bg-white"
-              }`}
-            >
-              Next
-            </button>
-          </div>
+          )}
         </section>
       </main>
 
-      {/* Mobile filter drawer (off-canvas) */}
+      {/* Mobile filter drawer overlay */}
       <div
-        className={`fixed inset-0 z-40 md:z-40 lg:hidden transition-opacity ${
+        className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
           drawerOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -674,18 +664,20 @@ export default function JobList() {
         onClick={() => setDrawerOpen(false)}
         aria-hidden={!drawerOpen}
       />
+
+      {/* Mobile filter drawer */}
       <aside
-        className={`fixed inset-y-0 left-0 w-full max-w-md bg-white z-50 p-5 border-r border-slate-200 transition-transform lg:hidden ${
+        className={`fixed inset-y-0 left-0 w-full max-w-sm bg-white z-50 p-4 sm:p-5 border-r border-slate-200 transition-transform duration-300 lg:hidden overflow-y-auto ${
           drawerOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         role="dialog"
         aria-modal="true"
         aria-label="Filters"
       >
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 sticky top-0 bg-white pb-3 border-b border-slate-100">
           <h3 className="text-lg font-semibold text-slate-900">Filters</h3>
           <button
-            className="rounded-lg border border-slate-300 px-3 py-1.5 text-slate-700"
+            className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50"
             onClick={() => setDrawerOpen(false)}
             aria-label="Close filters"
           >
@@ -693,7 +685,7 @@ export default function JobList() {
           </button>
         </div>
 
-        <div className="overflow-y-auto max-h-[calc(100vh-7rem)] pr-1">
+        <div className="pb-20">
           <FiltersPanel
             q={q}
             setQ={setQ}
@@ -718,15 +710,16 @@ export default function JobList() {
           />
         </div>
 
-        <div className="mt-4 flex gap-3">
+        {/* Fixed bottom action buttons */}
+        <div className="fixed bottom-0 left-0 right-0 max-w-sm bg-white border-t border-slate-200 p-4 flex gap-3">
           <button
-            className="flex-1 rounded-lg bg-slate-900 text-white px-5 py-3 hover:bg-slate-800"
+            className="flex-1 rounded-lg bg-slate-900 text-white px-4 py-2.5 text-sm font-medium hover:bg-slate-800"
             onClick={() => setDrawerOpen(false)}
           >
-            Apply Filters
+            View {total} jobs
           </button>
           <button
-            className="flex-1 rounded-lg border border-slate-300 text-slate-700 px-5 py-3 hover:bg-white"
+            className="flex-1 rounded-lg border border-slate-300 text-slate-700 px-4 py-2.5 text-sm font-medium hover:bg-slate-50"
             onClick={() => {
               setQ("");
               setLoc("");
@@ -740,10 +733,11 @@ export default function JobList() {
               setSort("relevance");
             }}
           >
-            Reset all
+            Reset
           </button>
         </div>
       </aside>
+
       <Footer />
     </div>
   );
@@ -773,10 +767,30 @@ function FiltersPanel({
 }) {
   return (
     <>
+      {/* Desktop search inputs */}
+      <div className="hidden lg:block mb-5 space-y-3">
+        <input
+          type="text"
+          placeholder="Job title or keyword"
+          className="w-full text-sm rounded-lg border border-slate-300 px-3 py-2"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Location"
+          className="w-full text-sm rounded-lg border border-slate-300 px-3 py-2"
+          value={loc}
+          onChange={(e) => setLoc(e.target.value)}
+        />
+      </div>
+
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-slate-900">Filters</h3>
+        <h3 className="text-base sm:text-lg font-semibold text-slate-900">
+          Filters
+        </h3>
         <button
-          className="text-sm text-slate-600 hover:underline"
+          className="text-xs sm:text-sm text-slate-600 hover:underline"
           onClick={() => {
             setQ("");
             setLoc("");
@@ -802,7 +816,10 @@ function FiltersPanel({
         onClear={() => setTypes([])}
       >
         {JOB_TYPES.map((t) => (
-          <label key={t} className="flex items-center gap-2 text-slate-700">
+          <label
+            key={t}
+            className="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"
+          >
             <input
               type="checkbox"
               checked={types.includes(t)}
@@ -811,6 +828,7 @@ function FiltersPanel({
                   prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]
                 )
               }
+              className="rounded"
             />
             <span>{t}</span>
           </label>
@@ -825,7 +843,10 @@ function FiltersPanel({
         onClear={() => setExps([])}
       >
         {EXPERIENCES.map((e) => (
-          <label key={e} className="flex items-center gap-2 text-slate-700">
+          <label
+            key={e}
+            className="flex items-center gap-2 text-sm text-slate-700 cursor-pointer"
+          >
             <input
               type="checkbox"
               checked={exps.includes(e)}
@@ -834,6 +855,7 @@ function FiltersPanel({
                   prev.includes(e) ? prev.filter((x) => x !== e) : [...prev, e]
                 )
               }
+              className="rounded"
             />
             <span>{e}</span>
           </label>
@@ -848,7 +870,7 @@ function FiltersPanel({
         onClear={() => setPostedDays(null)}
       >
         <select
-          className="w-full rounded-lg border border-slate-300 px-3 py-2"
+          className="w-full text-sm rounded-lg border border-slate-300 px-3 py-2"
           value={postedDays ?? ""}
           onChange={(e) =>
             setPostedDays(e.target.value === "" ? null : Number(e.target.value))
@@ -877,7 +899,7 @@ function FiltersPanel({
             type="number"
             min={0}
             placeholder="Min"
-            className="w-1/2 rounded-lg border border-slate-300 px-3 py-2"
+            className="w-1/2 text-sm rounded-lg border border-slate-300 px-2 sm:px-3 py-2"
             value={minSalary || ""}
             onChange={(e) => setMinSalary(Number(e.target.value || 0))}
           />
@@ -885,7 +907,7 @@ function FiltersPanel({
             type="number"
             min={0}
             placeholder="Max"
-            className="w-1/2 rounded-lg border border-slate-300 px-3 py-2"
+            className="w-1/2 text-sm rounded-lg border border-slate-300 px-2 sm:px-3 py-2"
             value={maxSalary || ""}
             onChange={(e) => setMaxSalary(Number(e.target.value || 0))}
           />
@@ -899,11 +921,12 @@ function FiltersPanel({
         hasActive={remote}
         onClear={() => setRemote(false)}
       >
-        <label className="flex items-center gap-2 text-slate-700">
+        <label className="flex items-center gap-2 text-sm text-slate-700 cursor-pointer">
           <input
             type="checkbox"
             checked={remote}
             onChange={() => setRemote((v) => !v)}
+            className="rounded"
           />
           <span>Remote only</span>
         </label>
@@ -916,7 +939,7 @@ function FiltersPanel({
         hasActive={tags.length > 0}
         onClear={() => setTags([])}
       >
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {[
             "React",
             "TypeScript",
@@ -942,10 +965,10 @@ function FiltersPanel({
                     arr.includes(t) ? arr.filter((x) => x !== t) : [...arr, t]
                   )
                 }
-                className={`px-3 py-1.5 rounded-full text-sm ${
+                className={`px-2.5 py-1 rounded-full text-xs sm:text-sm transition ${
                   active
                     ? "bg-slate-900 text-white"
-                    : "bg-slate-100 text-slate-700"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
                 {t}
@@ -960,11 +983,11 @@ function FiltersPanel({
 
 function Chip({ children, onClose }) {
   return (
-    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm">
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs sm:text-sm">
       {children}
       <button
         type="button"
-        className="text-slate-500 hover:text-slate-700"
+        className="text-slate-500 hover:text-slate-700 text-base"
         onClick={onClose}
         aria-label="Remove filter"
       >
