@@ -259,18 +259,22 @@ export default function JobList() {
     };
   }, []);
 
-  const [q, setQ] = useState(initial.q);
-  const [loc, setLoc] = useState(initial.loc);
-  const [remote, setRemote] = useState(initial.remote);
-  const [types, setTypes] = useState(initial.types);
-  const [exps, setExps] = useState(initial.exps);
-  const [postedDays, setPostedDays] = useState(initial.postedDays);
-  const [minSalary, setMinSalary] = useState(initial.minSalary);
-  const [maxSalary, setMaxSalary] = useState(initial.maxSalary);
-  const [tags, setTags] = useState(initial.tags);
-  const [sort, setSort] = useState(initial.sort);
-  const [page, setPage] = useState(initial.page);
+  const [q, setQ] = useState(initial?.q || ""); // default to empty string
+  const [loc, setLoc] = useState(initial?.loc || ""); // default to empty string
+  const [remote, setRemote] = useState(initial?.remote || false); // default to false
+  const [types, setTypes] = useState(initial?.types || []); // default to empty array
+  const [exps, setExps] = useState(initial?.exps || []); // default to empty array
+  const [postedDays, setPostedDays] = useState(
+    initial?.postedDays != null ? initial.postedDays : null
+  ); // null if undefined
+  const [minSalary, setMinSalary] = useState(initial?.minSalary || 0);
+  const [maxSalary, setMaxSalary] = useState(initial?.maxSalary || 0);
+  const [tags, setTags] = useState(initial?.tags || []); // empty array default
+  const [sort, setSort] = useState(initial?.sort || "relevance");
+  const [page, setPage] = useState(initial?.page || 1);
   const [jobs, setJobs] = useState([]);
+
+  // Debounced values (safe now)
   const debouncedQ = useDebounced(q, 300);
   const debouncedLoc = useDebounced(loc, 300);
 
@@ -321,8 +325,8 @@ export default function JobList() {
 
   // Derived job list with filtering
   const filtered = useMemo(() => {
-    const text = debouncedQ.trim().toLowerCase();
-    const city = debouncedLoc.trim().toLowerCase();
+    const text = (debouncedQ || "").trim().toLowerCase();
+    const city = (debouncedLoc || "").trim().toLowerCase();
 
     const withinDays = (iso, days) => {
       if (days == null) return true;
@@ -384,7 +388,7 @@ export default function JobList() {
       const aFeat = a.featured ? 1 : 0;
       const bFeat = b.featured ? 1 : 0;
       if (bFeat !== aFeat) return bFeat - aFeat;
-      const k = debouncedQ.toLowerCase();
+      const k = (debouncedQ || "").toLowerCase();
       const score = (j) =>
         (k && j.title.toLowerCase().includes(k) ? 2 : 0) +
         (k && j.company.toLowerCase().includes(k) ? 1 : 0) +
