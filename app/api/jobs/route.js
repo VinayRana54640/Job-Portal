@@ -28,12 +28,6 @@ function parseSalary(salaryText) {
 
 export async function GET(req, res) {
   try {
-    res.setHeader("Access-Control-Allow-Origin", "*"); // allow all origins
-    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Content-Type, Authorization"
-    );
     await connectDB();
     const { searchParams } = new URL(req.url);
     const action = searchParams.get("action");
@@ -66,15 +60,48 @@ export async function GET(req, res) {
           description: job.aboutRole,
         };
       });
-      return Response.json({ formattedJobs }, { status: 200 });
+      return Response.json(
+        { formattedJobs },
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*", // allow all origins
+            "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          },
+        }
+      );
     }
 
     if (action == "getById") {
       const getJob = await Job.findById(searchParams.get("id"));
       if (!getJob) {
-        return Response.json({ error: "Job not found" }, { status: 404 });
+        return Response.json(
+          { error: "Job not found" },
+          {
+            status: 404,
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*", // allow all origins
+              "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+              "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            },
+          }
+        );
       }
-      return Response.json({ getJob: getJob }, { status: 200 });
+      return Response.json(
+        { getJob: getJob },
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*", // allow all origins
+            "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          },
+        }
+      );
     }
 
     if (action == "getTrending") {
@@ -92,11 +119,30 @@ export async function GET(req, res) {
           featured: false,
         };
       });
-      return Response.json({ formattedJobs }, { status: 200 });
+      return Response.json(
+        { formattedJobs },
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*", // allow all origins
+            "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          },
+        }
+      );
     }
     return Response.json(
       { error: "Invalid or missing action parameter" },
-      { status: 400 }
+      {
+        status: 400,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*", // allow all origins
+          "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+      }
     );
   } catch (error) {}
 }

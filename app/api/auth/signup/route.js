@@ -15,12 +15,6 @@ export function generateOtp6() {
 
 export async function POST(req, res) {
   try {
-    res.setHeader("Access-Control-Allow-Origin", "*"); // allow all origins
-    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Content-Type, Authorization"
-    );
     const { name, email, phoneNumber, action, otp } = await req.json();
     await connectDB();
 
@@ -60,19 +54,49 @@ export async function POST(req, res) {
         otp: otp,
         name: name,
       });
-      return Response.json({ message: "OTP sent to email", status: 200 });
+      return Response.json(
+        { message: "OTP sent to email" },
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*", // allow all origins
+            "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          },
+        }
+      );
     }
 
     if (action == "verifyOtp") {
       if (!otp) {
-        return Response.json({ error: "OTP is required" }, { status: 400 });
+        return Response.json(
+          { error: "OTP is required" },
+          {
+            status: 400,
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*", // allow all origins
+              "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+              "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            },
+          }
+        );
       }
       let user = await User.findOne({ email: email, otp: otp });
       if (user.otp == otp) {
         if (!email || !phoneNumber) {
           return Response.json(
             { error: "All fields are required" },
-            { status: 400 }
+            {
+              status: 400,
+              headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*", // allow all origins
+                "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization",
+              },
+            }
           );
         }
 
@@ -104,14 +128,44 @@ export async function POST(req, res) {
             userId: user._id,
             token: token,
           },
-          { status: 201 }
+          {
+            status: 201,
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*", // allow all origins
+              "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+              "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            },
+          }
         );
       } else {
-        return Response.json({ error: "Invalid OTP" }, { status: 400 });
+        return Response.json(
+          { error: "Invalid OTP" },
+          {
+            status: 400,
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*", // allow all origins
+              "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+              "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            },
+          }
+        );
       }
     }
   } catch (error) {
     console.log(error);
-    return Response.json({ error: "Something went wrong" }, { status: 500 });
+    return Response.json(
+      { error: "Something went wrong" },
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*", // allow all origins
+          "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+      }
+    );
   }
 }

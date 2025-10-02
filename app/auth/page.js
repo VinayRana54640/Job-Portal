@@ -383,7 +383,7 @@ export default function AuthPage() {
             <div className="mt-6 space-y-5">
               <div>
                 <label className="block text-sm text-slate-700 mb-2">
-                  Enter the 6-digit code sent to {fullPhone}
+                  Enter the 6-digit code sent to {email}
                 </label>
                 <OtpInputs value={otp} onChange={setOtp} />
                 <p className="mt-2 text-xs text-slate-500">
