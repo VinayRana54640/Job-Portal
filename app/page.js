@@ -456,7 +456,7 @@ function JobCard({ job, navigateJobdescription }) {
       }`}
     >
       <img
-        src={job.logo}
+        src="http://148.66.159.109/abb.gif"
         alt={job.company}
         className="h-12 w-12 rounded bg-white border border-slate-200 shrink-0"
       />

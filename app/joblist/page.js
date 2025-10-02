@@ -211,7 +211,7 @@ function JobCard({ job }) {
 
       {/* Quick Apply Button */}
       <button
-        className="w-full sm:absolute sm:right-5 sm:top-5 sm:w-auto rounded-lg bg-slate-900 text-white px-4 py-2 text-sm hover:bg-slate-800 transition"
+        className="w-full sm:absolute sm:right-5 sm:top-5 sm:w-auto rounded-lg bg-slate-900 text-white px-4 py-2 text-sm hover:bg-slate-800 transition mt-[34px]"
         onClick={(e) => {
           e.preventDefault();
           // Handle quick apply
