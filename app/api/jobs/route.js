@@ -26,6 +26,15 @@ function parseSalary(salaryText) {
   }
 }
 
+function formatDate(date) {
+  const d = new Date(date);
+  if (isNaN(d.getTime())) return ""; // return empty string if invalid
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = d.getFullYear();
+  return `${day}-${month}-${year}`;
+}
+
 export async function GET(req, res) {
   try {
     await connectDB();
@@ -37,7 +46,7 @@ export async function GET(req, res) {
       const jobs = await Job.find({});
 
       const formattedJobs = jobs.map((job) => {
-        console.log("Formatted Jobs:", job.company);
+        console.log("Formatted Jobs:", formatDate(job.postDate));
 
         return {
           id: job._id,
@@ -51,9 +60,7 @@ export async function GET(req, res) {
           salaryMin: parseSalary(job.salaryRange.min),
           salaryMax: parseSalary(job.salaryRange.max),
           currency: "INR",
-          postedAt: new Date(
-            Date.now() - 1000 * 60 * 60 * 24 * 1
-          ).toISOString(),
+          postedAt: formatDate(job.postDate),
           tags: job.technologies,
           applyUrl: job.website,
           featured: false,
@@ -90,6 +97,7 @@ export async function GET(req, res) {
           }
         );
       }
+      getJob.postDate = formatDate(getJob.postDate);
       return Response.json(
         { getJob: getJob },
         {
@@ -145,4 +153,54 @@ export async function GET(req, res) {
       }
     );
   } catch (error) {}
+}
+
+function getRandomDate(start, end) {
+  const startMs = start.getTime();
+  const endMs = end.getTime();
+  const randomMs = startMs + Math.random() * (endMs - startMs);
+  return new Date(randomMs);
+}
+
+export async function POST(req) {
+  try {
+    await connectDB();
+
+    // Define the date range
+    const start = new Date("2025-09-27T00:00:00Z");
+    const end = new Date("2025-10-02T23:59:59Z");
+
+    // Fetch all jobs
+    const jobs = await Job.find({});
+
+    // Update each job with a random createdAt
+    const updatePromises = jobs.map((job) => {
+      job.postDate = getRandomDate(start, end);
+      return job.save();
+    });
+
+    await Promise.all(updatePromises);
+
+    return new Response(
+      JSON.stringify({
+        message: `Updated ${jobs.length} jobs with random dates.`,
+      }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
+    );
+  } catch (error) {
+    console.error("Error updating jobs:", error);
+    return new Response(JSON.stringify({ error: "Internal server error" }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+  }
 }

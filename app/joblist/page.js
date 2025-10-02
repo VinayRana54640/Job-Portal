@@ -205,12 +205,12 @@ function JobCard({ job }) {
       {/* Mobile salary and date row */}
       <div className="flex items-center justify-between gap-2 sm:hidden text-xs text-slate-500">
         <span>{formatSalaryINR(job.salaryMin, job.salaryMax)}</span>
-        <span>Posted {new Date(job.postedAt).toLocaleDateString()}</span>
+        <span>Posted {job.postedAt}</span>
       </div>
 
       {/* Desktop date */}
       <div className="hidden sm:block text-xs text-slate-500">
-        Posted {new Date(job.postedAt).toLocaleDateString()}
+        Posted {job.postedAt}
       </div>
 
       {/* Quick Apply Button */}

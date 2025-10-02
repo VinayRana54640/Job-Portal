@@ -249,9 +249,7 @@ export default function JobDescriptionClient() {
           salaryMin: parseSalary(res.data.getJob.salaryRange.min),
           salaryMax: parseSalary(res.data.getJob.salaryRange.max),
           currency: "INR",
-          postedAt: new Date(
-            Date.now() - 1000 * 60 * 60 * 24 * 2
-          ).toISOString(),
+          postedAt: res.data.getJob.postDate,
           tags: res.data.getJob.technologies,
           applyUrl: res.data.getJob.website,
           description: res.data.getJob.aboutRole,
@@ -278,16 +276,25 @@ export default function JobDescriptionClient() {
     } catch (error) {}
   };
 
+  function formatDate(date) {
+    const d = new Date(date);
+    if (isNaN(d.getTime())) return ""; // return empty string if invalid
+    const day = String(d.getDate()).padStart(2, "0");
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const year = d.getFullYear();
+    return `${day}-${month}-${year}`;
+  }
+
   const postedLabel = useMemo(() => {
     if (job) {
-      const days = Math.floor(
-        (Date.now() - new Date(job.postedAt).getTime()) / (1000 * 60 * 60 * 24)
-      );
-      if (days <= 1) return "Posted today";
-      if (days < 7) return `Posted ${days} days ago`;
-      return `Posted ${days} days ago`;
+      // const days = Math.floor(
+      //   (Date.now() - new Date(job.postedAt).getTime()) / (1000 * 60 * 60 * 24)
+      // );
+      // if (days <= 1) return "Posted today";
+      // if (days < 7) return `Posted ${days} days ago`;
+      return `Posted ${formatDate(job.postedAt)}`;
     }
-  }, []);
+  }, [job]);
 
   const salary = formatSalaryINR(job.salaryMin, job.salaryMax);
 

@@ -18,6 +18,7 @@ const JobSchema = new mongoose.Schema(
     website: String,
     location: String,
     company: String,
+    postDate: Date,
   },
   { timestamps: true }
 );
