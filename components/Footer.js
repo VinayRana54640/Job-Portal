@@ -75,7 +75,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <a href="/privacy-policy">Privacy</a>
             <a href="/terms-conditions">Terms</a>
-            {/* <a href="#">Cookies</a> */}
+            <a href="/refund-policy">Refund Policy</a>
           </div>
         </div>
       </div>
