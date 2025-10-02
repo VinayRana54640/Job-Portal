@@ -124,17 +124,19 @@ export default function AuthPage() {
     if (mode == "signup") {
       const digits = phone.replace(/\D/g, "");
       if (digits.length < 10) return false;
+      if (!email) return false;
     }
 
     if (mode === "signup" && !agree) return false;
     if (mode === "signup" && name.trim().length < 2) return false;
     return true;
-  }, [phone, mode, agree, name]);
+  }, [phone, mode, agree, name, email]);
 
   const canVerify = /^\d{6}$/.test(otp);
 
   const sendOtp = async () => {
     try {
+      setLoading(true);
       const url = mode == "signup" ? "/api/auth/signup" : "/api/auth/login";
       const res = await fetch(url, {
         method: "POST",
@@ -148,7 +150,7 @@ export default function AuthPage() {
       });
 
       if (res.ok) {
-        setLoading(true);
+        setLoading(false);
         setMsg("");
         setOtpSent(true);
         reset(30);
@@ -235,7 +237,7 @@ export default function AuthPage() {
               matched instantly.
             </h2>
             <p className="mt-3 text-white/80">
-              Phone-based authentication keeps accounts secure and fast to
+              Email based authentication keeps accounts secure and fast to
               access.
             </p>
           </div>
@@ -295,8 +297,8 @@ export default function AuthPage() {
           </h1>
           <p className="mt-2 text-slate-600">
             {mode === "login"
-              ? "Enter mobile number to receive a one-time code."
-              : "Sign up with mobile number and verify using the SMS code."}
+              ? "Enter email to receive a one-time code."
+              : "Sign up with email and verify using the OTP code."}
           </p>
 
           {!otpSent ? (

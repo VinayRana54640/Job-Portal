@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import api from "../../utils/axiosClient";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
@@ -135,6 +136,7 @@ function formatSalaryINR(min, max) {
 }
 
 function JobCard({ job }) {
+  const router = useRouter();
   console.log("Rendering job:", job);
   return (
     <a
@@ -218,6 +220,7 @@ function JobCard({ job }) {
         className="w-full sm:absolute sm:right-5 sm:top-5 sm:w-auto rounded-lg bg-slate-900 text-white px-4 py-2 text-sm hover:bg-slate-800 transition mt-[34px]"
         onClick={(e) => {
           e.preventDefault();
+          router.push("/jobdescription?id=" + job.id);
           // Handle quick apply
         }}
       >

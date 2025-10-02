@@ -44,7 +44,7 @@ export default function Footer() {
               <a href="#">Resume Search</a>
             </li> */}
             <li>
-              <a href="/pricing">Pricing</a>
+              <a href="/subscription">Pricing</a>
             </li>
             {/* <li>
               <a href="#">Enterprise</a>

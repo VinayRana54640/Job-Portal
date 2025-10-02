@@ -1,7 +1,8 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useMemo, useState } from "react";
 import api from "../../utils/axiosClient";
+import { useAuth } from "@/context/AuthContext";
 export const dynamic = "force-dynamic";
 
 /**
@@ -170,6 +171,8 @@ function ApplyModal({ open, onClose, onSubmit, defaultUrl }) {
 
 export default function JobDescriptionClient() {
   const searchParams = useSearchParams();
+  const { isLogin } = useAuth();
+  const router = useRouter();
   const id = searchParams.get("id");
   const [open, setOpen] = useState(false);
   const [job, setJob] = useState({
@@ -305,6 +308,15 @@ export default function JobDescriptionClient() {
     alert("Application submitted!");
   };
 
+  const applyNow = (e) => {
+    if (isLogin()) {
+      e.preventDefault();
+      setOpen(true);
+    } else {
+      router.push("/auth");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar */}
@@ -320,12 +332,8 @@ export default function JobDescriptionClient() {
           </a>
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#apply"
-              onClick={(e) => {
-                e.preventDefault();
-                setOpen(true);
-              }}
-              className="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800"
+              onClick={applyNow}
+              className="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 cursor-pointer"
             >
               Apply now
             </a>
@@ -353,7 +361,11 @@ export default function JobDescriptionClient() {
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-14 text-white">
           <div className="flex items-start gap-4">
             <img
-              src={company.logo}
+              src={
+                "https://gufvnuemtylcczajttgm.supabase.co/storage/v1/object/public/Job%20Portal/" +
+                company.name.split(" ")[0].toLowerCase() +
+                ".gif"
+              }
               alt={company.name}
               className="h-12 w-12 rounded bg-white p-1 border border-white/30"
             />
@@ -388,8 +400,8 @@ export default function JobDescriptionClient() {
 
           <div className="mt-8 flex gap-3">
             <button
-              onClick={() => setOpen(true)}
-              className="rounded-lg bg-white text-slate-900 px-5 py-3 hover:bg-slate-100"
+              onClick={applyNow}
+              className="rounded-lg bg-white text-slate-900 px-5 py-3 hover:bg-slate-100 cursor-pointer"
             >
               Apply now
             </button>
@@ -477,8 +489,8 @@ export default function JobDescriptionClient() {
           {/* Apply CTA */}
           <div className="mt-8 flex flex-wrap gap-3">
             <button
-              onClick={() => setOpen(true)}
-              className="rounded-lg bg-slate-900 text-white px-6 py-3 hover:bg-slate-800"
+              onClick={applyNow}
+              className="rounded-lg bg-slate-900 text-white px-6 py-3 hover:bg-slate-800 cursor-pointer"
             >
               Apply now
             </button>
@@ -498,7 +510,11 @@ export default function JobDescriptionClient() {
           <div className="rounded-2xl border border-slate-200 p-6">
             <div className="flex items-center gap-3">
               <img
-                src={company.logo}
+                src={
+                  "https://gufvnuemtylcczajttgm.supabase.co/storage/v1/object/public/Job%20Portal/" +
+                  company.name.split(" ")[0].toLowerCase() +
+                  ".gif"
+                }
                 alt={company.name}
                 className="h-10 w-10 rounded bg-white border border-slate-200 object-contain"
               />
@@ -563,8 +579,8 @@ export default function JobDescriptionClient() {
       {/* Floating Apply for mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden border-t border-slate-200 bg-white p-4 flex gap-3">
         <button
-          onClick={() => setOpen(true)}
-          className="flex-1 rounded-lg bg-slate-900 text-white px-5 py-3 hover:bg-slate-800"
+          onClick={applyNow}
+          className="flex-1 rounded-lg bg-slate-900 text-white px-5 py-3 hover:bg-slate-800 cursor-pointer"
         >
           Apply now
         </button>

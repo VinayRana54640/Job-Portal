@@ -32,17 +32,27 @@ export async function POST(req, res) {
       const emailHtml = await render(<OtpEmail otp={otp} />);
       console.log(emailHtml);
 
+      // const transporter = nodemailer.createTransport({
+      //   service: "gmail", // or use SMTP server
+      //   auth: {
+      //     user: process.env.SMTP_USER,
+      //     pass: process.env.SMTP_PASS,
+      //   },
+      // });
+
       const transporter = nodemailer.createTransport({
-        service: "gmail", // or use SMTP server
+        host: "smtpout.secureserver.net", // GoDaddy's SMTP server
+        port: 465, // Port for secure SMTP
+        secure: true,
         auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
+          user: process.env.SMTP_USER, // Your email address
+          pass: process.env.SMTP_PASS, // Your email password or app password
         },
       });
 
       // Send email
       await transporter.sendMail({
-        from: `"MyApp" <${process.env.SMTP_USER}>`,
+        from: `"Job4Grads" <${process.env.SMTP_USER}>`,
         to: email,
         subject: "Your OTP Code",
         html: emailHtml,
