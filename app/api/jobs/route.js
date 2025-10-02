@@ -26,8 +26,14 @@ function parseSalary(salaryText) {
   }
 }
 
-export async function GET(req) {
+export async function GET(req, res) {
   try {
+    res.setHeader("Access-Control-Allow-Origin", "*"); // allow all origins
+    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
     await connectDB();
     const { searchParams } = new URL(req.url);
     const action = searchParams.get("action");

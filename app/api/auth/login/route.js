@@ -10,8 +10,14 @@ export function generateOtp6() {
   // Generates a 6-digit string, e.g., "123456"
   return Math.floor(100000 + Math.random() * 900000).toString();
 }
-export async function POST(req) {
+export async function POST(req, res) {
   try {
+    res.setHeader("Access-Control-Allow-Origin", "*"); // allow all origins
+    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
     const { email, action, otp } = await req.json();
     await connectDB();
     if (action == "sendOtp") {
