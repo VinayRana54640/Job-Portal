@@ -293,7 +293,7 @@ export default function SubscriptionPage() {
     });
     let checkoutOptions = {
       paymentSessionId: data.payment_session_id,
-      redirectTarget: "_top",
+      redirectTarget: "_self",
     };
     cashfree.checkout(checkoutOptions);
     // // Redirect to payment page
