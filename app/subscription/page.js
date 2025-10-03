@@ -2,6 +2,8 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import React, { useMemo, useState } from "react";
+import { load } from "@cashfreepayments/cashfree-js";
+import api from "@/utils/axiosClient";
 
 /**
  * Subscription Pricing Page (Single-file React + Tailwind)
@@ -170,9 +172,34 @@ export default function SubscriptionPage() {
     return billing === "monthly" ? "Billed monthly" : "Billed yearly";
   }, [billing]);
 
-  const onSelect = (planId) => {
-    alert(`Selected plan: ${planId}`);
-    // Route to checkout or open billing portal
+  const onPaymentSelect = async (plan) => {
+    // alert(`Selected plan: ${plan.priceMonthly}`);
+    let userDetails = await api.get("/api/user?action=getUserById");
+    console.log("User details:", userDetails.data.user);
+    const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+    const response = await fetch("/api/cashfree", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        orderId,
+        orderAmount: plan.priceMonthly, // ₹500
+        customerId: userDetails.data.user._id,
+        customerEmail: userDetails.data.user.email,
+        customerPhone: userDetails.data.user.phoneNumber,
+      }),
+    });
+
+    const data = await response.json();
+    console.log("Cashfree order response:", data);
+    let cashfree = await load({
+      mode: "prod",
+    });
+    let checkoutOptions = {
+      paymentSessionId: data.payment_session_id,
+      redirectTarget: "_self",
+    };
+    cashfree.checkout(checkoutOptions);
+    // // Redirect to payment page
   };
 
   return (
@@ -292,6 +319,7 @@ export default function SubscriptionPage() {
                         ? "bg-slate-900 text-white hover:bg-slate-800"
                         : "border border-slate-300 text-slate-700 hover:bg-white"
                     }`}
+                    onClick={() => onPaymentSelect(t)}
                   >
                     {t.cta}
                   </button>

@@ -1,19 +1,41 @@
 import { connectDB } from "@/lib/mongoose";
 import User from "../../../models/User";
+import jwt from "jsonwebtoken";
 
-export async function GET(req, res) {
+export async function GET(req) {
   try {
     await connectDB();
-    const user = await User.findOne({});
-    return new Response(JSON.stringify({ user }), {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*", // allow all origins
-        "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
-      },
-    });
+    const { searchParams } = new URL(req.url);
+    const action = searchParams.get("action");
+    if (action === "getUserById") {
+      // Get the token from search params or headers
+      const token = req.headers.get("Authorization")?.replace("Bearer ", "");
+      if (!token) {
+        return new Response(JSON.stringify({ error: "Token is required" }), {
+          status: 401,
+        });
+      }
+
+      // Verify token
+      let decoded;
+      try {
+        decoded = jwt.verify(token, process.env.JWT_SECRET);
+      } catch (err) {
+        return new Response(JSON.stringify({ error: "Invalid token" }), {
+          status: 401,
+        });
+      }
+      console.log("Decoded JWT:", decoded);
+      // decoded will have email, userId, etc. depending on what you put in JWT
+      const user = await User.findOne({ email: decoded.email }).lean();
+
+      return new Response(JSON.stringify({ user, decoded }), { status: 200 });
+    } else {
+      const user = await User.findOne({});
+      return new Response(JSON.stringify({ user }), {
+        status: 200,
+      });
+    }
   } catch (error) {}
 }
 

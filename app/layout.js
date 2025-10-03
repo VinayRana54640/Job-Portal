@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,9 +22,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        {/* Cashfree SDK (load before page interactive) */}
+        <Script
+          src="https://sdk.cashfree.com/js/v3/cashfree.js"
+          strategy="beforeInteractive"
+        />
+      </head>
+      <body className="antialiased">
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
