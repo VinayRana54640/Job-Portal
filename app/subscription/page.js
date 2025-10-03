@@ -328,7 +328,7 @@ export default function SubscriptionPage() {
       alert("Cashfree SDK not loaded yet, please try again");
       return;
     }
-
+    console.log("Check the session...", id, sessionIdRef.current);
     let checkoutOptions = {
       paymentSessionId: id || sessionIdRef.current,
       redirectTarget: "_blank", // or "_blank" on mobile
@@ -338,11 +338,10 @@ export default function SubscriptionPage() {
       .checkout(checkoutOptions)
       .then((result) => {
         if (result?.error) {
-          alert("Checkout error: " + result.error + id || sessionIdRef.current);
+          alert("Checkout error: " + result.error + sessionIdRef.current);
         } else {
           alert(
-            "Checkout result: " + JSON.stringify(result) + id ||
-              sessionIdRef.current
+            "Checkout result: " + JSON.stringify(result) + sessionIdRef.current
           );
         }
       })
