@@ -17,6 +17,11 @@ export const metadata = {
   title: "Fresher Jobs & Graduate Opportunities | Job4Grads",
   description:
     "Find your first job faster with Job4Grads. Get intelligent job matching, resume support, and interview opportunities with top startups and MNCs.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5, // Allow zoom for accessibility
+  },
 };
 
 export default function RootLayout({ children }) {
