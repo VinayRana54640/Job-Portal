@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.yourdomain.com/advice</loc><lastmod>2025-10-02T18:50:14.129Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/contact</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/auth</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/form-builder</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/about</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/create-job</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/jobdescription</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/privacy-policy</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/refund-policy</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/subscription</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/terms-conditions</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/joblist</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.yourdomain.com/profile</loc><lastmod>2025-10-02T18:50:14.130Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/advice</loc><lastmod>2025-10-03T07:46:31.047Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/contact</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/create-job</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/auth</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/jobdescription</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/form-builder</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/about</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/privacy-policy</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/refund-policy</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/profile</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/subscription</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/terms-conditions</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/joblist</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.yourdomain.com/payment-success</loc><lastmod>2025-10-03T07:46:31.048Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
