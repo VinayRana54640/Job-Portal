@@ -305,7 +305,6 @@ export default function SubscriptionPage() {
     });
 
     const data = await response.json();
-    console.log("Cashfree order response:", data);
 
     let checkoutOptions = {
       paymentSessionId: data.payment_session_id,
@@ -313,20 +312,8 @@ export default function SubscriptionPage() {
     };
     cashfree
       .checkout(checkoutOptions)
-      .then((result) => {
-        if (result?.error) {
-          alert("Checkout error: " + result.error + JSON.stringify(data));
-        } else {
-          alert(
-            "Checkout result: " +
-              JSON.stringify(result) +
-              data.payment_session_id
-          );
-        }
-      })
-      .catch((e) => {
-        alert("Checkout rejected: " + e);
-      });
+      .then((result) => {})
+      .catch((e) => {});
   };
 
   // useEffect(() => {
