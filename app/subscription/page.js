@@ -333,7 +333,18 @@ export default function SubscriptionPage() {
       redirectTarget: "_blank", // or "_blank" on mobile
     };
 
-    cashfreeSDK.checkout(checkoutOptions);
+    cashfreeSDK
+      .checkout(checkoutOptions)
+      .then((result) => {
+        if (result?.error) {
+          alert("Checkout error: " + result.error);
+        } else {
+          alert("Checkout result: " + JSON.stringify(result));
+        }
+      })
+      .catch((e) => {
+        alert("Checkout rejected: " + e);
+      });
   };
 
   const openPaymentConfirmation = async (tier) => {
