@@ -291,7 +291,10 @@ export default function SubscriptionPage() {
     const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
     const response = await fetch("/api/cashfree", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify({
         orderId,
         orderAmount: plan.priceMonthly, // ₹500
