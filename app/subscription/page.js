@@ -312,7 +312,7 @@ export default function SubscriptionPage() {
       .checkout(checkoutOptions)
       .then((result) => {
         if (result?.error) {
-          alert("Checkout error: " + result.error + data.payment_session_id);
+          alert("Checkout error: " + result.error + data);
         } else {
           alert(
             "Checkout result: " +
@@ -324,7 +324,6 @@ export default function SubscriptionPage() {
       .catch((e) => {
         alert("Checkout rejected: " + e);
       });
-    // // Redirect to payment page
   };
 
   // useEffect(() => {
