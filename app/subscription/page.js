@@ -177,7 +177,6 @@ export default function SubscriptionPage() {
   useEffect(() => {
     const initCashfree = async () => {
       try {
-        setIsSDKLoading(true);
         const cashfreeInstance = await load({ mode: "production" });
         setCashfreeSDK(cashfreeInstance);
         console.log("Cashfree SDK loaded successfully");
@@ -185,7 +184,6 @@ export default function SubscriptionPage() {
         console.error("Failed to load Cashfree SDK:", error);
         alert("Failed to initialize payment system. Please refresh the page.");
       } finally {
-        setIsSDKLoading(false);
       }
     };
 
