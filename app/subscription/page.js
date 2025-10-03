@@ -321,15 +321,16 @@ export default function SubscriptionPage() {
       setCashfreeSDK(cf);
     }
   }, []);
+  const sessionIdRef = useRef(null);
 
-  const onPaymentSelect = (sessionIdData) => {
+  const onPaymentSelect = (id) => {
     if (!cashfreeSDK) {
       alert("Cashfree SDK not loaded yet, please try again");
       return;
     }
 
     let checkoutOptions = {
-      paymentSessionId: sessionIdData,
+      paymentSessionId: id || sessionIdRef.current,
       redirectTarget: "_blank", // or "_blank" on mobile
     };
 
@@ -337,9 +338,12 @@ export default function SubscriptionPage() {
       .checkout(checkoutOptions)
       .then((result) => {
         if (result?.error) {
-          alert("Checkout error: " + result.error + sessionIdData);
+          alert("Checkout error: " + result.error + id || sessionIdRef.current);
         } else {
-          alert("Checkout result: " + JSON.stringify(result) + sessionIdData);
+          alert(
+            "Checkout result: " + JSON.stringify(result) + id ||
+              sessionIdRef.current
+          );
         }
       })
       .catch((e) => {
@@ -366,8 +370,8 @@ export default function SubscriptionPage() {
 
     const data = await response.json();
     setLoadingId(null);
-    sessionId = data.payment_session_id;
-    onPaymentSelect(data.payment_session_id);
+    sessionIdRef.current = data.payment_session_id;
+    onPaymentSelect(sessionIdRef.current);
     // setSessionId(data.payment_session_id);
     // setSelectedTier(tier);
     // setConfirmOpen(true);
