@@ -337,9 +337,9 @@ export default function SubscriptionPage() {
       .checkout(checkoutOptions)
       .then((result) => {
         if (result?.error) {
-          alert("Checkout error: " + result.error);
+          alert("Checkout error: " + result.error + sessionId);
         } else {
-          alert("Checkout result: " + JSON.stringify(result));
+          alert("Checkout result: " + JSON.stringify(result) + sessionId);
         }
       })
       .catch((e) => {
