@@ -312,7 +312,7 @@ export default function SubscriptionPage() {
       .checkout(checkoutOptions)
       .then((result) => {
         if (result?.error) {
-          alert("Checkout error: " + result.error + data);
+          alert("Checkout error: " + result.error + JSON.stringify(data));
         } else {
           alert(
             "Checkout result: " +
