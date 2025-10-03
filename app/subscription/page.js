@@ -173,9 +173,9 @@ export default function SubscriptionPage() {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState(tiers[1]);
   const [processing, setProcessing] = useState(false);
-  const [sessionId, setSessionId] = useState(null);
+  // const [sessionId, setSessionId] = useState(null);
   const [loadingId, setLoadingId] = useState(null);
-
+  let sessionId = null;
   const [billing, setBilling] = useState("monthly"); // ready for yearly discounts if needed
   const priceNote = useMemo(() => {
     return billing === "monthly" ? "Billed monthly" : "Billed yearly";
@@ -366,7 +366,8 @@ export default function SubscriptionPage() {
 
     const data = await response.json();
     setLoadingId(null);
-    setSessionId(data.payment_session_id);
+    sessionId = data.payment_session_id;
+    // setSessionId(data.payment_session_id);
     setSelectedTier(tier);
     setConfirmOpen(true);
   };
