@@ -323,35 +323,9 @@ export default function SubscriptionPage() {
   }, []);
   const sessionIdRef = useRef(null);
 
-  const onPaymentSelect = (id) => {
-    if (!cashfreeSDK) {
-      alert("Cashfree SDK not loaded yet, please try again");
-      return;
-    }
-    console.log("Check the session...", id, sessionIdRef.current);
-    let checkoutOptions = {
-      paymentSessionId: id || sessionIdRef.current,
-      redirectTarget: "_blank", // or "_blank" on mobile
-    };
-
-    cashfreeSDK
-      .checkout(checkoutOptions)
-      .then((result) => {
-        if (result?.error) {
-          alert("Checkout error: " + result.error + sessionIdRef.current);
-        } else {
-          alert(
-            "Checkout result: " + JSON.stringify(result) + sessionIdRef.current
-          );
-        }
-      })
-      .catch((e) => {
-        alert("Checkout rejected: " + e);
-      });
-  };
-
-  const openPaymentConfirmation = async (tier) => {
+  const onPaymentSelect = async (tier) => {
     setLoadingId(tier.id);
+
     let userDetails = await api.get("/api/user?action=getUserById");
     const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
 
@@ -368,13 +342,41 @@ export default function SubscriptionPage() {
     });
 
     const data = await response.json();
+    console.log("data....", data);
     setLoadingId(null);
-    sessionIdRef.current = data.payment_session_id;
-    onPaymentSelect(sessionIdRef.current);
-    // setSessionId(data.payment_session_id);
-    // setSelectedTier(tier);
-    // setConfirmOpen(true);
+
+    if (!cashfreeSDK) {
+      alert("Cashfree SDK not loaded yet, please try again");
+      return;
+    }
+    let checkoutOptions = {
+      paymentSessionId: data.payment_session_id,
+      redirectTarget: "_blank", // or "_blank" on mobile
+    };
+
+    cashfreeSDK
+      .checkout(checkoutOptions)
+      .then((result) => {
+        if (result?.error) {
+          alert("Checkout error: " + result.error + data.payment_session_id);
+        } else {
+          alert(
+            "Checkout result: " +
+              JSON.stringify(result) +
+              data.payment_session_id
+          );
+        }
+      })
+      .catch((e) => {
+        alert("Checkout rejected: " + e);
+      });
   };
+
+  // const openPaymentConfirmation = async (tier) => {
+  //   // setSessionId(data.payment_session_id);
+  //   // setSelectedTier(tier);
+  //   // setConfirmOpen(true);
+  // };
 
   return (
     <>
@@ -511,7 +513,7 @@ export default function SubscriptionPage() {
                           : "border border-slate-300 text-slate-700 hover:bg-white"
                       }`}
                       // onClick={() => onPaymentSelect(t)}
-                      onClick={() => openPaymentConfirmation(t)}
+                      onClick={() => onPaymentSelect(t)}
                     >
                       <span>{loadingId === t.id ? t.cta + "..." : t.cta}</span>
                     </button>
