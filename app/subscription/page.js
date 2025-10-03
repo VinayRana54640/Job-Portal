@@ -196,66 +196,11 @@ export default function SubscriptionPage() {
     });
     let checkoutOptions = {
       paymentSessionId: data.payment_session_id,
-      redirectTarget: "_self",
+      redirectTarget: "_modal",
     };
     cashfree.checkout(checkoutOptions);
     // // Redirect to payment page
   };
-
-  // const onPaymentSelect = (plan) => {
-  //   // Immediately triggered by user tap/click
-  //   console.log("Selected plan:", plan.priceMonthly);
-
-  //   // Create order ID
-  //   const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-
-  //   // Fetch user details
-  //   api
-  //     .get("/api/user?action=getUserById")
-  //     .then((userDetails) => {
-  //       const user = userDetails.data.user;
-  //       console.log("User details:", user);
-
-  //       // Create order via backend
-  //       return fetch("/api/cashfree", {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/json" },
-  //         body: JSON.stringify({
-  //           orderId,
-  //           orderAmount: plan.priceMonthly,
-  //           customerId: user._id,
-  //           customerEmail: user.email,
-  //           customerPhone: user.phoneNumber,
-  //         }),
-  //       });
-  //     })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log("Cashfree order response:", data);
-
-  //       if (!data.payment_session_id) {
-  //         alert("Payment session not created. Check API response.");
-  //         return;
-  //       }
-
-  //       // Initialize Cashfree SDK
-  //       const cf = new window.Cashfree({
-  //         env: "production", // "sandbox" for testing
-  //       });
-
-  //       // Trigger checkout immediately in the click event
-  //       cf.checkout({
-  //         paymentSessionId: data.payment_session_id,
-  //         redirectTarget: "_self", // works on mobile & desktop
-  //       });
-
-  //       console.log("Cashfree checkout triggered");
-  //     })
-  //     .catch((err) => {
-  //       console.error("Error in payment flow:", err);
-  //       alert("Payment initiation failed. See console for details.");
-  //     });
-  // };
 
   return (
     <div className="min-h-screen bg-white">
