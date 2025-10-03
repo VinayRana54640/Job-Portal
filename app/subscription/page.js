@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { load } from "@cashfreepayments/cashfree-js";
 import api from "@/utils/axiosClient";
 import Script from "next/script";
+import { PaymentConfirmModal } from "@/components/PaymentConfirmation";
 
 /**
  * Subscription Pricing Page (Single-file React + Tailwind)
@@ -169,6 +170,11 @@ function Check({ tone = "emerald" }) {
 
 export default function SubscriptionPage() {
   const [cashfreeSDK, setCashfreeSDK] = useState(null);
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState(tiers[1]);
+  const [processing, setProcessing] = useState(false);
+  const [sessionId, setSessionId] = useState(null);
+  const [loadingId, setLoadingId] = useState(null);
 
   const [billing, setBilling] = useState("monthly"); // ready for yearly discounts if needed
   const priceNote = useMemo(() => {
@@ -316,7 +322,22 @@ export default function SubscriptionPage() {
     }
   }, []);
 
-  const onPaymentSelect = async (plan) => {
+  const onPaymentSelect = async () => {
+    if (!cashfreeSDK) {
+      alert("Cashfree SDK not loaded yet, please try again");
+      return;
+    }
+
+    let checkoutOptions = {
+      paymentSessionId: sessionId,
+      redirectTarget: "_self", // or "_blank" on mobile
+    };
+
+    cashfreeSDK.checkout(checkoutOptions);
+  };
+
+  const openPaymentConfirmation = async (tier) => {
+    setLoadingId(tier.id);
     let userDetails = await api.get("/api/user?action=getUserById");
     const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
 
@@ -325,7 +346,7 @@ export default function SubscriptionPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         orderId,
-        orderAmount: plan.priceMonthly,
+        orderAmount: tier.priceMonthly,
         customerId: userDetails.data.user._id,
         customerEmail: userDetails.data.user.email,
         customerPhone: userDetails.data.user.phoneNumber,
@@ -333,20 +354,12 @@ export default function SubscriptionPage() {
     });
 
     const data = await response.json();
-    console.log("Cashfree order response:", data);
-
-    if (!cashfreeSDK) {
-      alert("Cashfree SDK not loaded yet, please try again");
-      return;
-    }
-
-    let checkoutOptions = {
-      paymentSessionId: data.payment_session_id,
-      redirectTarget: "_self", // or "_blank" on mobile
-    };
-
-    cashfreeSDK.checkout(checkoutOptions);
+    setLoadingId(null);
+    setSessionId(data.payment_session_id);
+    setSelectedTier(tier);
+    setConfirmOpen(true);
   };
+
   return (
     <>
       <Script
@@ -474,14 +487,17 @@ export default function SubscriptionPage() {
 
                   <div className="mt-6 pt-6 border-t border-slate-200">
                     <button
+                      key={t.id}
+                      disabled={loadingId === t.id}
                       className={`w-full rounded-lg px-5 py-3 ${
                         isPopular
                           ? "bg-slate-900 text-white hover:bg-slate-800"
                           : "border border-slate-300 text-slate-700 hover:bg-white"
                       }`}
-                      onClick={() => onPaymentSelect(t)}
+                      // onClick={() => onPaymentSelect(t)}
+                      onClick={() => openPaymentConfirmation(t)}
                     >
-                      {t.cta}
+                      <span>{loadingId === t.id ? t.cta + "..." : t.cta}</span>
                     </button>
                   </div>
                 </div>
@@ -571,6 +587,13 @@ export default function SubscriptionPage() {
           </div>
         </div>
       </footer> */}
+        <PaymentConfirmModal
+          open={confirmOpen}
+          tier={selectedTier}
+          processing={processing}
+          onClose={() => setConfirmOpen(false)}
+          onConfirm={onPaymentSelect}
+        />
         <Footer />
       </div>
     </>
