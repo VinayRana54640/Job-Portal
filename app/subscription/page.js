@@ -172,90 +172,90 @@ export default function SubscriptionPage() {
     return billing === "monthly" ? "Billed monthly" : "Billed yearly";
   }, [billing]);
 
-  // const onPaymentSelect = async (plan) => {
-  //   // alert(`Selected plan: ${plan.priceMonthly}`);
-  //   let userDetails = await api.get("/api/user?action=getUserById");
-  //   console.log("User details:", userDetails.data.user);
-  //   const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-  //   const response = await fetch("/api/cashfree", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       orderId,
-  //       orderAmount: plan.priceMonthly, // ₹500
-  //       customerId: userDetails.data.user._id,
-  //       customerEmail: userDetails.data.user.email,
-  //       customerPhone: userDetails.data.user.phoneNumber,
-  //     }),
-  //   });
-
-  //   const data = await response.json();
-  //   console.log("Cashfree order response:", data);
-  //   let cashfree = await load({
-  //     mode: "production",
-  //   });
-  //   let checkoutOptions = {
-  //     paymentSessionId: data.payment_session_id,
-  //     redirectTarget: "_self",
-  //   };
-  //   cashfree.checkout(checkoutOptions);
-  //   // // Redirect to payment page
-  // };
-
-  const onPaymentSelect = (plan) => {
-    // Immediately triggered by user tap/click
-    console.log("Selected plan:", plan.priceMonthly);
-
-    // Create order ID
+  const onPaymentSelect = async (plan) => {
+    // alert(`Selected plan: ${plan.priceMonthly}`);
+    let userDetails = await api.get("/api/user?action=getUserById");
+    console.log("User details:", userDetails.data.user);
     const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+    const response = await fetch("/api/cashfree", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        orderId,
+        orderAmount: plan.priceMonthly, // ₹500
+        customerId: userDetails.data.user._id,
+        customerEmail: userDetails.data.user.email,
+        customerPhone: userDetails.data.user.phoneNumber,
+      }),
+    });
 
-    // Fetch user details
-    api
-      .get("/api/user?action=getUserById")
-      .then((userDetails) => {
-        const user = userDetails.data.user;
-        console.log("User details:", user);
-
-        // Create order via backend
-        return fetch("/api/cashfree", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            orderId,
-            orderAmount: plan.priceMonthly,
-            customerId: user._id,
-            customerEmail: user.email,
-            customerPhone: user.phoneNumber,
-          }),
-        });
-      })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("Cashfree order response:", data);
-
-        if (!data.payment_session_id) {
-          alert("Payment session not created. Check API response.");
-          return;
-        }
-
-        // Initialize Cashfree SDK
-        const cf = new window.Cashfree({
-          env: "production", // "sandbox" for testing
-        });
-
-        // Trigger checkout immediately in the click event
-        cf.checkout({
-          paymentSessionId: data.payment_session_id,
-          redirectTarget: "_self", // works on mobile & desktop
-        });
-
-        console.log("Cashfree checkout triggered");
-      })
-      .catch((err) => {
-        console.error("Error in payment flow:", err);
-        alert("Payment initiation failed. See console for details.");
-      });
+    const data = await response.json();
+    console.log("Cashfree order response:", data);
+    let cashfree = await load({
+      mode: "production",
+    });
+    let checkoutOptions = {
+      paymentSessionId: data.payment_session_id,
+      redirectTarget: "_self",
+    };
+    cashfree.checkout(checkoutOptions);
+    // // Redirect to payment page
   };
+
+  // const onPaymentSelect = (plan) => {
+  //   // Immediately triggered by user tap/click
+  //   console.log("Selected plan:", plan.priceMonthly);
+
+  //   // Create order ID
+  //   const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+
+  //   // Fetch user details
+  //   api
+  //     .get("/api/user?action=getUserById")
+  //     .then((userDetails) => {
+  //       const user = userDetails.data.user;
+  //       console.log("User details:", user);
+
+  //       // Create order via backend
+  //       return fetch("/api/cashfree", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({
+  //           orderId,
+  //           orderAmount: plan.priceMonthly,
+  //           customerId: user._id,
+  //           customerEmail: user.email,
+  //           customerPhone: user.phoneNumber,
+  //         }),
+  //       });
+  //     })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log("Cashfree order response:", data);
+
+  //       if (!data.payment_session_id) {
+  //         alert("Payment session not created. Check API response.");
+  //         return;
+  //       }
+
+  //       // Initialize Cashfree SDK
+  //       const cf = new window.Cashfree({
+  //         env: "production", // "sandbox" for testing
+  //       });
+
+  //       // Trigger checkout immediately in the click event
+  //       cf.checkout({
+  //         paymentSessionId: data.payment_session_id,
+  //         redirectTarget: "_self", // works on mobile & desktop
+  //       });
+
+  //       console.log("Cashfree checkout triggered");
+  //     })
+  //     .catch((err) => {
+  //       console.error("Error in payment flow:", err);
+  //       alert("Payment initiation failed. See console for details.");
+  //     });
+  // };
 
   return (
     <div className="min-h-screen bg-white">
