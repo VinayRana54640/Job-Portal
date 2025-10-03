@@ -276,65 +276,26 @@ export default function SubscriptionPage() {
   //   }
   // };
 
-  // useEffect(() => {
-  //   const initCashfree = async () => {
-  //     let cashfree = await load({
-  //       mode: "production",
-  //     });
-  //     setCashfreeSDK(cashfree);
-  //   };
-  //   initCashfree();
-  // }, []);
-
-  // const onPaymentSelect = async (plan) => {
-  //   // alert(`Selected plan: ${plan.priceMonthly}`);
-
-  //   let userDetails = await api.get("/api/user?action=getUserById");
-  //   console.log("User details:", userDetails.data.user);
-  //   const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-  //   const response = await fetch("/api/cashfree", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       orderId,
-  //       orderAmount: plan.priceMonthly, // ₹500
-  //       customerId: userDetails.data.user._id,
-  //       customerEmail: userDetails.data.user.email,
-  //       customerPhone: userDetails.data.user.phoneNumber,
-  //     }),
-  //   });
-
-  //   const data = await response.json();
-  //   console.log("Cashfree order response:", data);
-
-  //   let checkoutOptions = {
-  //     paymentSessionId: data.payment_session_id,
-  //     redirectTarget: "_self",
-  //   };
-  //   cashfreeSDK.checkout(checkoutOptions);
-  //   // // Redirect to payment page
-  // };
-
   useEffect(() => {
-    if (typeof window !== "undefined" && window.Cashfree) {
-      const cf = window.Cashfree({ mode: "production" }); // or "sandbox"
-      setCashfreeSDK(cf);
-    }
+    const initCashfree = async () => {};
+    initCashfree();
   }, []);
-  const sessionIdRef = useRef(null);
 
-  const onPaymentSelect = async (tier) => {
-    setLoadingId(tier.id);
-
+  const onPaymentSelect = async (plan) => {
+    // alert(`Selected plan: ${plan.priceMonthly}`);
+    let cashfree = await load({
+      mode: "production",
+    });
+    setCashfreeSDK(cashfree);
     let userDetails = await api.get("/api/user?action=getUserById");
+    console.log("User details:", userDetails.data.user);
     const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-
     const response = await fetch("/api/cashfree", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         orderId,
-        orderAmount: tier.priceMonthly,
+        orderAmount: plan.priceMonthly, // ₹500
         customerId: userDetails.data.user._id,
         customerEmail: userDetails.data.user.email,
         customerPhone: userDetails.data.user.phoneNumber,
@@ -342,18 +303,12 @@ export default function SubscriptionPage() {
     });
 
     const data = await response.json();
-    console.log("data....", data);
-    setLoadingId(null);
+    console.log("Cashfree order response:", data);
 
-    if (!cashfreeSDK) {
-      alert("Cashfree SDK not loaded yet, please try again");
-      return;
-    }
     let checkoutOptions = {
       paymentSessionId: data.payment_session_id,
-      redirectTarget: "_blank", // or "_blank" on mobile
+      redirectTarget: "_self",
     };
-
     cashfreeSDK
       .checkout(checkoutOptions)
       .then((result) => {
@@ -370,7 +325,64 @@ export default function SubscriptionPage() {
       .catch((e) => {
         alert("Checkout rejected: " + e);
       });
+    // // Redirect to payment page
   };
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined" && window.Cashfree) {
+  //     const cf = window.Cashfree({ mode: "production" }); // or "sandbox"
+  //     setCashfreeSDK(cf);
+  //   }
+  // }, []);
+
+  // const onPaymentSelect = async (tier) => {
+  //   setLoadingId(tier.id);
+
+  //   let userDetails = await api.get("/api/user?action=getUserById");
+  //   const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+
+  //   const response = await fetch("/api/cashfree", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       orderId,
+  //       orderAmount: tier.priceMonthly,
+  //       customerId: userDetails.data.user._id,
+  //       customerEmail: userDetails.data.user.email,
+  //       customerPhone: userDetails.data.user.phoneNumber,
+  //     }),
+  //   });
+
+  //   const data = await response.json();
+  //   console.log("data....", data);
+  //   setLoadingId(null);
+
+  //   if (!cashfreeSDK) {
+  //     alert("Cashfree SDK not loaded yet, please try again");
+  //     return;
+  //   }
+  //   let checkoutOptions = {
+  //     paymentSessionId: data.payment_session_id,
+  //     redirectTarget: "_blank", // or "_blank" on mobile
+  //   };
+
+  //   cashfreeSDK
+  //     .checkout(checkoutOptions)
+  //     .then((result) => {
+  //       if (result?.error) {
+  //         alert("Checkout error: " + result.error + data.payment_session_id);
+  //       } else {
+  //         alert(
+  //           "Checkout result: " +
+  //             JSON.stringify(result) +
+  //             data.payment_session_id
+  //         );
+  //       }
+  //     })
+  //     .catch((e) => {
+  //       alert("Checkout rejected: " + e);
+  //     });
+  // };
 
   // const openPaymentConfirmation = async (tier) => {
   //   // setSessionId(data.payment_session_id);
@@ -380,7 +392,7 @@ export default function SubscriptionPage() {
 
   return (
     <>
-      <Script
+      {/* <Script
         src="https://sdk.cashfree.com/js/v3/cashfree.js"
         strategy="afterInteractive"
         onLoad={() => {
@@ -390,7 +402,7 @@ export default function SubscriptionPage() {
             setCashfreeSDK(cf);
           }
         }}
-      />
+      /> */}
 
       <div className="min-h-screen bg-white">
         {/* Top Bar */}

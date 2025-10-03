@@ -29,10 +29,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Cashfree SDK (load before page interactive) */}
-        {/* <Script
+        <Script
           src="https://sdk.cashfree.com/js/v3/cashfree.js"
           strategy="beforeInteractive"
-        /> */}
+        />
       </head>
       <body className="antialiased">
         <AuthProvider>{children}</AuthProvider>
