@@ -222,7 +222,8 @@ export default function SubscriptionPage() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to create payment order");
+        const errorText = await response.text(); // get raw error body
+        throw new Error(`Failed to create payment order: ${errorText}`);
       }
 
       const data = await response.json();
