@@ -36,9 +36,16 @@ export async function POST(req) {
     );
   } catch (error) {
     console.error("Error creating order:", error);
-    return new Response(JSON.stringify({ error: "Failed to create order" }), {
-      status: 500,
-    });
+
+    return new Response(
+      JSON.stringify({
+        error: "Failed to create order",
+        message: error.message || "Unknown error",
+        stack: process.env.NODE_ENV === "development" ? error.stack : undefined,
+        raw: error.response?.data || null, // useful if Cashfree returned an API error
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
   }
 }
 
