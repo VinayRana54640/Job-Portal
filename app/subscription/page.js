@@ -322,7 +322,7 @@ export default function SubscriptionPage() {
     }
   }, []);
 
-  const onPaymentSelect = async () => {
+  const onPaymentSelect = () => {
     if (!cashfreeSDK) {
       alert("Cashfree SDK not loaded yet, please try again");
       return;
@@ -330,7 +330,7 @@ export default function SubscriptionPage() {
 
     let checkoutOptions = {
       paymentSessionId: sessionId,
-      redirectTarget: "_self", // or "_blank" on mobile
+      redirectTarget: "_blank", // or "_blank" on mobile
     };
 
     cashfreeSDK.checkout(checkoutOptions);
