@@ -236,7 +236,7 @@ export default function SubscriptionPage() {
       // Configure checkout options
       const checkoutOptions = {
         paymentSessionId: data.payment_session_id,
-        redirectTarget: "_modal", // Use _modal for Safari compatibility
+        redirectTarget: "_self", // Use _modal for Safari compatibility
       };
 
       // Initiate Cashfree checkout
