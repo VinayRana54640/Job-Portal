@@ -14,13 +14,13 @@ export async function POST(req) {
 
     // Create order
     const response = await cashfree.PGCreateOrder({
-      order_amount: orderAmount,
+      order_amount: Number(orderAmount),
       order_currency: "INR",
-      order_id: orderId,
+      order_id: String(orderId),
       customer_details: {
-        customer_id: customerId,
-        customer_email: customerEmail,
-        customer_phone: customerPhone,
+        customer_id: String(customerId),
+        customer_email: String(customerEmail),
+        customer_phone: String(customerPhone),
       },
       order_meta: {
         return_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment-success?order_id=${orderId}`,
