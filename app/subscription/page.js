@@ -269,11 +269,19 @@ export default function SubscriptionPage() {
   //   }
   // };
 
+  useEffect(() => {
+    const initCashfree = async () => {
+      let cashfree = await load({
+        mode: "production",
+      });
+      setCashfreeSDK(cashfree);
+    };
+    initCashfree();
+  }, []);
+
   const onPaymentSelect = async (plan) => {
     // alert(`Selected plan: ${plan.priceMonthly}`);
-    let cashfree = await load({
-      mode: "production",
-    });
+
     let userDetails = await api.get("/api/user?action=getUserById");
     console.log("User details:", userDetails.data.user);
     const orderId = `order_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
@@ -296,7 +304,7 @@ export default function SubscriptionPage() {
       paymentSessionId: data.payment_session_id,
       redirectTarget: "_self",
     };
-    cashfree.checkout(checkoutOptions);
+    cashfreeSDK.checkout(checkoutOptions);
     // // Redirect to payment page
   };
 
