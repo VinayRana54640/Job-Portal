@@ -192,7 +192,7 @@ export default function SubscriptionPage() {
     const data = await response.json();
     console.log("Cashfree order response:", data);
     let cashfree = await load({
-      mode: "prod",
+      mode: "production",
     });
     let checkoutOptions = {
       paymentSessionId: data.payment_session_id,
