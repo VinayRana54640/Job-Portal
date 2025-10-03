@@ -261,7 +261,10 @@ export default function SubscriptionPage() {
         });
     } catch (error) {
       console.error("Payment initialization error:", error);
-      alert("Failed to initialize payment. Please try again.", error);
+      alert(
+        "Failed to initialize payment. Please try again.\n\nError: " +
+          (error.message || JSON.stringify(error))
+      );
     }
   };
 
