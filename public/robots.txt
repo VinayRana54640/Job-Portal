@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.yourdomain.com
+Host: https://www.job4grads.com
 
 # Sitemaps
-Sitemap: https://www.yourdomain.com/sitemap.xml
+Sitemap: https://www.job4grads.com/sitemap.xml
