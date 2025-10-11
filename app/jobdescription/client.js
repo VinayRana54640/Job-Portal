@@ -85,10 +85,33 @@ function Badge({ children, tone = "slate" }) {
   );
 }
 
-function ApplyModal({ open, onClose, onSubmit, defaultUrl }) {
+function ApplyModal({ open, onClose, defaultUrl }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [resume, setResume] = useState(null);
+
+  const onSubmit = async (payload) => {
+    // Replace with API call (multipart/form-data) to create application
+    if (!resume) return alert("Please select a resume");
+
+    const data = new FormData();
+    data.append("resume", payload.resume); // file
+    data.append("name", payload.name);
+    data.append("email", payload.email);
+
+    // setUploading(true);
+
+    const res = await fetch("/api/user/upload", {
+      method: "POST",
+      body: data,
+    });
+
+    const result = await res.json();
+    setUploading(false);
+    console.log("Application submitted:", payload);
+    setOpen(false);
+    alert("Application submitted!");
+  };
 
   if (!open) return null;
 
@@ -300,13 +323,6 @@ export default function JobDescriptionClient() {
   }, [job]);
 
   const salary = formatSalaryINR(job.salaryMin, job.salaryMax);
-
-  const onSubmit = (payload) => {
-    // Replace with API call (multipart/form-data) to create application
-    console.log("Application submitted:", payload);
-    setOpen(false);
-    alert("Application submitted!");
-  };
 
   const applyNow = (e) => {
     if (isLogin()) {
@@ -597,7 +613,6 @@ export default function JobDescriptionClient() {
       <ApplyModal
         open={open}
         onClose={() => setOpen(false)}
-        onSubmit={onSubmit}
         defaultUrl={job.applyUrl}
       />
     </div>

@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import api from "@/utils/axiosClient";
-
 // Top Navigation (theme-aligned with JobHub)
 function NavBar({ onBack }) {
   return (
@@ -103,7 +102,7 @@ function ProfilePreview({ profile, resumeMeta, onEdit }) {
     .map((s) => s.trim())
     .filter(Boolean);
 
-  const isPDF = resumeMeta?.url?.toLowerCase?.().endsWith(".pdf");
+  const isPDF = true; //resumeMeta?.url?.toLowerCase?.().endsWith(".pdf");
 
   return (
     <div className="rounded-2xl border border-slate-200 p-6 bg-white">
@@ -168,7 +167,7 @@ function ProfilePreview({ profile, resumeMeta, onEdit }) {
             <p className="text-slate-900 font-medium">—</p>
           )}
         </div>
-        <div className="sm:col-span-2">
+        {/* <div className="sm:col-span-2">
           <p className="text-xs text-slate-500">Portfolio / Links</p>
           {linkList.length ? (
             <div className="mt-1 flex flex-wrap gap-3">
@@ -187,7 +186,7 @@ function ProfilePreview({ profile, resumeMeta, onEdit }) {
           ) : (
             <p className="text-slate-900 font-medium">—</p>
           )}
-        </div>
+        </div> */}
         <div className="sm:col-span-2">
           <p className="text-xs text-slate-500">Bio</p>
           <p className="text-slate-900 mt-1">{bio || "—"}</p>
@@ -204,18 +203,18 @@ function ProfilePreview({ profile, resumeMeta, onEdit }) {
             <div className="mt-2 flex items-center gap-3">
               {resumeMeta.url ? (
                 <>
-                  <a
+                  {/* <a
                     href={resumeMeta.url}
-                    target="_blank"
-                    rel="noreferrer"
+                    download
                     className="px-3 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-slate-800 text-sm"
                   >
-                    View / Download
-                  </a>
+                    Download
+                  </a> */}
+
                   {isPDF ? (
                     <details className="w-full">
                       <summary className="cursor-pointer text-sm text-slate-700">
-                        Inline Preview
+                        Preview Resume
                       </summary>
                       <div className="mt-3 h-[480px] rounded-lg overflow-hidden border border-slate-200 bg-white">
                         <iframe
@@ -228,12 +227,12 @@ function ProfilePreview({ profile, resumeMeta, onEdit }) {
                   ) : null}
                 </>
               ) : null}
-              <button
+              {/* <button
                 onClick={onEdit}
                 className="px-3 py-1.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 text-sm"
               >
                 Replace Resume
-              </button>
+              </button> */}
             </div>
           </div>
         ) : (
@@ -334,11 +333,19 @@ function ProfileEditor({ profile, setProfile, resumeMeta, setResumeMeta }) {
     try {
       const form = new FormData();
       form.append("file", resumeFile);
+      form.append("fileName", resumeFile.name);
+      const token = localStorage.getItem("auth_token");
 
-      const res = await fetch("/api/upload", {
-        method: "POST",
-        body: form,
+      const res = await api.post("/api/user/upload", form, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`, // if your API needs auth
+        },
       });
+      // const res = await fetch("/api/upload", {
+      //   method: "POST",
+      //   body: form,
+      // });
 
       // Simulate incremental progress (fetch has no native progress)
       for (let p = 20; p <= 90; p += 10) {
@@ -346,20 +353,22 @@ function ProfileEditor({ profile, setProfile, resumeMeta, setResumeMeta }) {
         setUploadProgress(p);
       }
 
-      if (!res.ok) throw new Error("Upload failed");
+      if (res.status !== 200) throw new Error("Upload failed");
 
-      let data = {};
-      try {
-        data = await res.json();
-      } catch {
-        data = { url: "", name: resumeFile.name, size: resumeFile.size };
-      }
+      // let data = {};
+      // try {
+      //   data = await res.json();
+      // } catch {
+      //   data = { url: "", name: resumeFile.name, size: resumeFile.size };
+      // }
 
       setUploadProgress(100);
+      // console.log("check th response data...", data, res.data.fileUrl);
+      // await getFileMetadataFromS3()
       setResumeMeta({
-        url: data.url || "",
-        name: data.name || resumeFile.name,
-        size: data.size || resumeFile.size,
+        url: res.data.fileUrl,
+        name: resumeFile.name,
+        size: resumeFile.size,
       });
       setResumeStatus({
         type: "success",
@@ -475,7 +484,7 @@ function ProfileEditor({ profile, setProfile, resumeMeta, setResumeMeta }) {
                 className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
               />
             </div>
-            <div className="sm:col-span-2">
+            {/* <div className="sm:col-span-2">
               <label className="block text-sm text-slate-600">
                 Portfolio / Links
               </label>
@@ -487,7 +496,7 @@ function ProfileEditor({ profile, setProfile, resumeMeta, setResumeMeta }) {
                 placeholder="GitHub, LinkedIn, Portfolio URL"
                 className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
               />
-            </div>
+            </div> */}
             <div className="sm:col-span-2">
               <label className="block text-sm text-slate-600">Bio</label>
               <textarea
@@ -669,11 +678,15 @@ function DashboardContent() {
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await api.get("/api/user");
+        const res = await api.get("/api/user?action=getUserById");
         // const res = await fetch("/api/profile", { method: "GET" });
         if (res.status == 200) {
           const data = res.data;
-          console.log("check the user data....", data);
+          setResumeMeta({
+            url: data.user.resumeLink,
+            name: data.user.name,
+            size: "",
+          });
           setProfile({
             fullName: data.user.name,
             email: data.user.email,
@@ -683,7 +696,7 @@ function DashboardContent() {
             experienceYears: data.user.experienceYears,
             skills: data.user.skills[0],
             bio: data.user.bio,
-            links: data.user.links,
+            links: data.user.resumeLink,
           });
           // setProfile((p) => ({ ...p, ...(data?.profile || {}) }));
           // setResumeMeta(data?.resume || { url: "", name: "", size: 0 });

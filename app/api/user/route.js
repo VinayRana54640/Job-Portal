@@ -1,12 +1,14 @@
 import { connectDB } from "@/lib/mongoose";
 import User from "../../../models/User";
 import jwt from "jsonwebtoken";
+import AWS from "aws-sdk";
 
 export async function GET(req) {
   try {
     await connectDB();
     const { searchParams } = new URL(req.url);
     const action = searchParams.get("action");
+    let metadata;
     if (action === "getUserById") {
       // Get the token from search params or headers
       const token = req.headers.get("Authorization")?.replace("Bearer ", "");
@@ -26,17 +28,26 @@ export async function GET(req) {
         });
       }
       console.log("Decoded JWT:", decoded);
+
       // decoded will have email, userId, etc. depending on what you put in JWT
       const user = await User.findOne({ email: decoded.email }).lean();
 
-      return new Response(JSON.stringify({ user, decoded }), { status: 200 });
+      return new Response(JSON.stringify({ user, decoded }), {
+        status: 200,
+      });
     } else {
+      console.log(
+        "metadata in else.........................................",
+        metadata
+      );
       const user = await User.findOne({});
       return new Response(JSON.stringify({ user }), {
         status: 200,
       });
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log("error log...", error);
+  }
 }
 
 export async function POST(req, res) {

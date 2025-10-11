@@ -13,6 +13,8 @@ const UserSchema = new mongoose.Schema(
     skills: { type: Array },
     portfolio: { type: String },
     bio: { type: String },
+    resumeLink: { type: String },
+    fileName: { type: String },
   },
   { timestamps: true }
 );
