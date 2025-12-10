@@ -250,7 +250,7 @@ function RefundCancellationContent() {
             <p className="mt-2">
               Email:{" "}
               <a href="mailto:support@job4grads.com">support@job4grads.com</a> •
-              Phone: +91 7895933824
+              Phone: +91 9686800700
             </p>
           </div>
         </div>
@@ -259,9 +259,7 @@ function RefundCancellationContent() {
           <h3 className="text-xl font-semibold text-slate-900">
             Contact Information
           </h3>
-          <p className="text-slate-700 mt-2">
-            Job4Grads HQ, Meerut, Uttar Pradesh
-          </p>
+          <p className="text-slate-700 mt-2">Job4Grads HQ, Bangalore</p>
           <p className="text-slate-700">
             Support hours: Mon–Fri, 9:30–18:30 IST
           </p>

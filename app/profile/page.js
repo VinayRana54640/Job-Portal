@@ -762,7 +762,7 @@ function DashboardContent() {
             registered email.
           </p>
           <p className="text-slate-700">
-            Email: support@job4grads.com • Phone: +91 7895933824
+            Email: support@job4grads.com • Phone: +91 9686800700
           </p>
         </div>
       </div>

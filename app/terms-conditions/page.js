@@ -349,7 +349,7 @@ function TermsBody() {
             Contact Information
           </h3>
           <p className="text-slate-700 mt-2">
-            Job4Grads HQ, Meerut, Kanerkhera support@job4grads.com
+            Job4Grads HQ, Bangalore support@job4grads.com
           </p>
         </div>
       </div>

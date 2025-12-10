@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://www.job4grads.com/auth</loc><lastmod>2025-10-07T15:59:48.896Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/contact</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/about</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/jobdescription</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/advice</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/form-builder</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/payment-success</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/privacy-policy</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/profile</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/subscription</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/terms-conditions</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/refund-policy</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/joblist</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.job4grads.com/create-job</loc><lastmod>2025-10-07T15:59:48.897Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/advice</loc><lastmod>2025-12-10T18:02:03.032Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/auth</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/contact</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/about</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/create-job</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/form-builder</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/jobdescription</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/payment-success</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/refund-policy</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/terms-conditions</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/profile</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/profile-views</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/joblist</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/privacy-policy</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.job4grads.com/subscription</loc><lastmod>2025-12-10T18:02:03.033Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

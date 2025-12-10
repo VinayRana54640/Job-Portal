@@ -196,7 +196,7 @@ function SuccessDetails() {
                 </a>
               </li>
               <li>
-                Phone: <span className="text-slate-900">+91 7895933824</span>
+                Phone: <span className="text-slate-900">+91 9686800700</span>
               </li>
               <li>Hours: Mon–Fri, 9:30–18:30 IST</li>
             </ul>

@@ -383,9 +383,12 @@ function ContactForm() {
                 </a>
               </li> */}
               <li>
-                Phone: <span className="text-slate-900">+91 7895933824</span>
+                Phone: <span className="text-slate-900">+91 9686800700</span>
               </li>
-              <li>Address: 155/101 Hari Nagar Kankerkhera Meerut</li>
+              <li>
+                Address: Mahadevapura Main Rd, near DNR Casablanca, B
+                Narayanapura, Mahadevapura, Bengaluru, Karnataka 560048
+              </li>
               <li>Hours: Mon–Fri, 9:30–18:30 IST</li>
             </ul>
 

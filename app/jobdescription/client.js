@@ -92,10 +92,10 @@ function ApplyModal({ open, onClose, defaultUrl }) {
 
   const onSubmit = async (payload) => {
     // Replace with API call (multipart/form-data) to create application
-    if (!resume) return alert("Please select a resume");
+    // if (!resume) return alert("Please select a resume");
 
     const data = new FormData();
-    data.append("resume", payload.resume); // file
+    // data.append("resume", payload.resume); // file
     data.append("name", payload.name);
     data.append("email", payload.email);
 
@@ -107,7 +107,7 @@ function ApplyModal({ open, onClose, defaultUrl }) {
     });
 
     const result = await res.json();
-    setUploading(false);
+    // setUploading(false);
     console.log("Application submitted:", payload);
     setOpen(false);
     alert("Application submitted!");
@@ -152,7 +152,7 @@ function ApplyModal({ open, onClose, defaultUrl }) {
               placeholder="alex@email.com"
             />
           </div>
-          <div>
+          {/* <div>
             <label className="block text-sm text-slate-700 mb-1">
               Resume (PDF)
             </label>
@@ -162,11 +162,11 @@ function ApplyModal({ open, onClose, defaultUrl }) {
               className="w-full"
               onChange={(e) => setResume(e.target.files?.[0] || null)}
             />
-          </div>
+          </div> */}
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={() => {
-                onSubmit({ name, email, resume });
+                onSubmit({ name, email });
               }}
               className="flex-1 rounded-lg bg-slate-900 text-white px-5 py-3 hover:bg-slate-800"
             >
